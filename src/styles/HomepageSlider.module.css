@@ -1,0 +1,29 @@
+.slider {
+  display: flex;
+  height: 100%;
+}
+
+.SplideSlide {
+  height: 100%;
+}
+
+.carousel {
+  height: 680px;
+  background-color: #3aafd2;
+  width: 100%;
+}
+
+.imageContainer {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .carouselImg {
+    height: 100%;
+    width: 100%;
+  }
+  .imageContainer {
+    height: unset;
+    width: 100%;
+  }
+}

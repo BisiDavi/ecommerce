@@ -6,8 +6,10 @@ export default function Applayout({ children }: PropsWithChildren<{}>) {
   return (
     <div>
       <Header />
-      {children}
-      <Footer />
+      <main className="w-full">
+        {children}
+        <Footer />
+      </main>
     </div>
   );
 }

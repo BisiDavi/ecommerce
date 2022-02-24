@@ -1,0 +1,23 @@
+[
+  {
+    "bgColor": "#3aafd2",
+    "sliderTitle": "Huge Summer Collection",
+    "sliderCaption": "Has just arrived!",
+    "sliderDescription": "Swimwear, Tops, Shorts, Sunglasses & much more...",
+    "sliderImg": "/sliders/01.webp"
+  },
+  {
+    "bgColor": "#f5b1b0",
+    "sliderTitle": "Women Sportswear Sale",
+    "sliderCaption": "Hurry up! Limited time offer.",
+    "sliderDescription": "Sneakers, Kids, Sweatshirts, Hoodies & much more...",
+    "sliderImg": "/sliders/02.webp"
+  },
+  {
+    "bgColor": "#eba170",
+    "sliderTitle": "New Men Accessories",
+    "sliderCaption": "Complete your look with",
+    "sliderDescription": "Hats & Caps, Sunglasses, Bags & much more...",
+    "sliderImg": "/sliders/03.webp"
+  }
+]
