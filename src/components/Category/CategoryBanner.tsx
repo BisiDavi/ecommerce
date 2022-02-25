@@ -5,7 +5,7 @@ export default function CategoryBanner() {
   return (
     <div className="w-1/3 mr-4">
       <div className="categoryBannerColor flex flex-col h-100 overflow-hidden rounded-lg">
-        <div className="flex justify-between px-grid-gutter py-grid-gutter">
+        <div className="flex justify-between">
           <div>
             <h3 className="mb-1 text-2xl capitalize mt-4 ml-8">
               Shop Quicky from our Categories.

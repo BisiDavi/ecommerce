@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Free shipping for order over $200",
+    "icon": "/globe.png"
+  },
+  {
+    "text": "We return money within 30 days",
+    "icon": "/checkIcon.png"
+  },
+  {
+    "text": "Delivery to your doorstep",
+    "icon": "/delivery.png"
+  }
+]
