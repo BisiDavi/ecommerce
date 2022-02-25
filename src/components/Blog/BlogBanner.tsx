@@ -1,6 +1,6 @@
 export default function BlogBanner() {
   return (
-    <section className="items-center justify-center">
+    <section className="w-full items-center justify-center">
       <div className="flex justify-between">
         <div className="w-1/2 bg-pink-300 hover:bg-pink-200 flex justify-center p-16">
           <div className="content">

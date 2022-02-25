@@ -16,7 +16,7 @@ export default function ShopByBrand() {
     <section className="bg-white py-6 flex flex-col justify-center items-center">
       <h2 className="text-center mb-4 text-2xl capitalize">Shop by brand</h2>
       <Splide
-        className="container flex h-32"
+        className="container flex h-32 items-center"
         options={{
           type: "loop",
           autoplay: true,
@@ -43,7 +43,7 @@ export default function ShopByBrand() {
       >
         {brands.map((brand: any, index: number) => (
           <SplideSlide key={index}>
-            <div className="shadow-lg mx-4 w-40 p-2 h-24 flex justify-center rounded-lg items-center">
+            <div className="shadow-lg mx-4 mb-4 pt-4 w-40 p-2 h-24 flex justify-center rounded-lg items-center">
               <Image
                 src={brand.img}
                 alt={brand.name}

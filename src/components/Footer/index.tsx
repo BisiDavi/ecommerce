@@ -3,9 +3,9 @@ import TopFooter from "@/components/Footer/TopFooter";
 
 export default function Footer() {
   return (
-    <div>
+    <footer className="w-full">
       <TopFooter />
       <BottomFooter />
-    </div>
+    </footer>
   );
 }
