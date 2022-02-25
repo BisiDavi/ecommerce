@@ -10,11 +10,13 @@ interface formattedPriceProps {
   price: number;
   oldPrice?: boolean;
   isProduct?: boolean;
+  className?: string;
 }
 
 interface formatCurrencyProps extends formattedPriceProps {
   currencies: any[];
   currency: any;
+  className: string;
 }
 
 function FormatCurrency({
@@ -23,6 +25,7 @@ function FormatCurrency({
   isProduct,
   currencies,
   currency,
+  className,
 }: formatCurrencyProps): JSX.Element {
   const selectedCurrency = currencies?.filter(
     (currencyP: { code: string }) => currencyP.code === currency
@@ -37,10 +40,10 @@ function FormatCurrency({
   const productItemPrice = isProduct ? priceRate : price;
   const itemPrice = formatPrice(productItemPrice);
   return (
-    <>
+    <div className={`flex items-center text-xs ${className}`}>
       {currencySymbolFormatter(selectedCurrency[0])}
       {itemPrice}
-    </>
+    </div>
   );
 }
 
@@ -48,12 +51,13 @@ export default function FormattedPrice({
   price,
   oldPrice,
   isProduct,
+  className,
 }: formattedPriceProps): JSX.Element {
   const [currencies, status] = useCurrencies();
   const { currency } = useAppSelector((state) => state.currencyLanguage);
 
   return (
-    <div className="flex align-items-baseline">
+    <div className="flex items-center">
       {status === "error" ? (
         "unable to fetch price"
       ) : status === "loading" ? (
@@ -65,6 +69,7 @@ export default function FormattedPrice({
           isProduct={isProduct}
           currencies={currencies}
           currency={currency}
+          className={className}
         />
       )}
     </div>

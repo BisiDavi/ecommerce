@@ -20,7 +20,7 @@ export default function CategoriesSlider() {
           options={{
             type: "loop",
             perPage: 2,
-            gap: "1rem",
+            gap: "0.5rem",
             autoplay: true,
           }}
         >

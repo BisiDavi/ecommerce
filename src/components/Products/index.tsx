@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import { AiOutlineHeart } from "react-icons/ai";
 
@@ -82,7 +82,7 @@ export default function Product({
             <div
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              className={styles.productImage}
+              className={`${styles.productImage} lg:h-72 md:h-56`}
             >
               <Image
                 height={300}
@@ -92,6 +92,7 @@ export default function Product({
                 placeholder="blur"
                 blurDataURL={productImage}
                 loading="lazy"
+                layout="responsive"
               />
             </div>
           </a>
@@ -103,9 +104,9 @@ export default function Product({
             )}`}
             passHref
           >
-            <a className="product-meta text-xs">{product.vendor}</a>
+            <a className="text-xs hover:text-red-500">{product.vendor}</a>
           </Link>
-          <h3 className="product-title text-sm">
+          <h3 className="sm:text-sm md:text-md product-title sm:w-32  md:w-56 lg:w-72 text-sm">
             <Link href={`/products/${product.slug}`} passHref>
               <a
                 className="hover:text-red-500 product-link"
@@ -132,7 +133,6 @@ export default function Product({
         {`
           .product-title {
             overflow: hidden;
-            width: 300px;
             text-overflow: ellipsis;
           }
           .product-link {

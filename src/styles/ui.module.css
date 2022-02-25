@@ -68,6 +68,14 @@ header.header {
   margin: auto;
 }
 
+/* category slider */
+.categoryLink img:hover {
+  transform: scale(1.03);
+  -webkit-transition: -webkit-transform 300ms ease-in 0s;
+  -webkit-transition: -webkit-transform 300ms ease-in 0s;
+  transition: transform 300ms ease-in 0s;
+}
+
 @media (max-width: 768px) {
   .cartDiscount button.btn {
     font-size: 14px;

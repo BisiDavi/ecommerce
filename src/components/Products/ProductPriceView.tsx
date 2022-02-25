@@ -5,9 +5,13 @@ import styles from "@/styles/ui.module.css";
 export default function ProductPriceView({ product }: any) {
   return (
     <div className="flex justify-between">
-      <ul className="product-price flex items-center">
+      <ul className="product-price flex items-center sm:flex-col lg:flex-row">
         <li className={`mx-1 ${styles.price}`}>
-          <FormattedPrice price={product.price} isProduct />
+          <FormattedPrice
+            className="font-bold"
+            price={product.price}
+            isProduct
+          />
         </li>
         {product.hkd_compare_at_price > 0 && (
           <li className="mx-1">

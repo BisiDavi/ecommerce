@@ -8,10 +8,10 @@ export default function CategoryBanner() {
         <div className="flex justify-between">
           <div>
             <h3 className="mb-1 text-2xl capitalize mt-4 ml-8">
-              Shop Quicky from our Categories.
+              Explore our collections
             </h3>
             <Link href="/shop" passHref>
-              <a className="text-white ml-8 mt-4 text-lg">
+              <a className="text-white ml-8 mt-4 text-lg hover:text-red-500">
                 Get started now
                 <i className="ci-arrow-right fs-xs align-middle ms-1"></i>
               </a>

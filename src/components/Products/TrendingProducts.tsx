@@ -19,7 +19,7 @@ function TrendingProductsCatalog() {
 
   return (
     <section className="container md:pt-3 pb-0 md:mb-3">
-      <h2 className="text-center trending">Trending products</h2>
+      <h2 className="text-center lg:text-3xl sm:text-xl font-bold capitalize">Trending products</h2>
       {liveHealthyProductStatus === "error" ? (
         <h1>unable to fetch products, Network issues</h1>
       ) : liveHealthyProductStatus === "loading" ? (
@@ -43,19 +43,7 @@ function TrendingProductsCatalog() {
             </Link>
           </div>
         </div>
-      )}
-      <style jsx>
-        {`
-          h2.trending {
-            font-size: 24px;
-          }
-          @media (max-width: 768px) {
-            h2.trending {
-              font-size: 18px;
-            }
-          }
-        `}
-      </style>
+      )}      
     </section>
   );
 }
