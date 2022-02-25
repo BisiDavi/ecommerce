@@ -32,7 +32,7 @@ export default function CartWidget({ cart }: CartWidgetProps) {
       >
         <span>&times;</span>
       </button>
-      <div className="d-flex align-items-center">
+      <div className="flex align-items-center">
         <Link href={`/products/${cart.product.slug}`} passHref>
           <a className="flex-shrink-0">
             <Image
@@ -49,7 +49,7 @@ export default function CartWidget({ cart }: CartWidgetProps) {
               <a>{cart.product.name}</a>
             </Link>
           </h6>
-          <div className="widget-product-meta d-flex align-items-baseline">
+          <div className="widget-product-meta flex align-items-baseline">
             <span className="text-accent me-2">
               <FormattedPrice price={cart?.price} />
             </span>

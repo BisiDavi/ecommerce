@@ -3,6 +3,7 @@ import FormattedPrice from "@/lib/formatPrice";
 import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 import { BsCart4 } from "react-icons/bs";
 import Tooltip from "@/components/Tooltip";
+import { useState } from "react";
 
 const HeaderCartDropdown = dynamic(
   () => import("@/components/Dropdown/CartDropdown")
@@ -43,7 +44,7 @@ export function NotAuthorizedView({
         href="#"
         onClick={toggleAuthModalHandler}
       >
-        <AiOutlineUser fontSize={20} className="mr-2" />
+        <AiOutlineUser fontSize={24} className="mr-2" />
         <Tooltip text="Sign-in / Sign-up ">
           <div className="navbar-tool-text flex flex-col me-2 items-start">
             <span className="text-xs">Hello, Sign in</span>
@@ -77,15 +78,15 @@ export function AuthorizedView({
   userDetail,
 }: authorizedViewProps) {
   return (
-    <div className="d-flex items-center ms-5 me-0">
+    <div className="flex items-center ms-5 me-0">
       <AiOutlineUser />
-      <div className="text d-flex flex-column">
+      <div className="text flex flex-column">
         <a className="navbar-tool cursor-pointer ms-1 me-n1 me-lg-2">
           <span className="navbar-tool-tooltip">
             Welcome {userDetail.firstName}
           </span>
           <div className="navbar-tool-text ms-n3">
-            <div className="d-flex flex-column me-3">
+            <div className="flex flex-column me-3">
               <span>Hello,</span>{" "}
               <span className="fs-sm text-accent fw-bold">
                 {`${userDetail.lastName} ${userDetail.firstName}`}{" "}
@@ -125,14 +126,27 @@ export function NavbarDropdown({
   toggleSlideCartMobile,
   cart,
 }: NavbarDropdownProps) {
+  const [dropdownStatus, setDropdownStatus] = useState(false);
+
+  function onClickHandler() {
+    setDropdownStatus(!dropdownStatus);
+  }
   return (
     <>
-      <div className="dropdown ms-1 flex items-center">
-        <div onClick={toggleSlideCartMobile} className="cart-counter">
-          {cart?.items?.length > 0 && (
-            <span className="navbar-tool-label">{cart?.items?.length}</span>
-          )}
-          <BsCart4 fontSize={20} />
+      <div
+        onClick={onClickHandler}
+        className="bg-gray-50 hover:bg-gray-100 shadow-lg cursor-pointer rounded-lg p-4 ms-1 flex items-center"
+      >
+        <div className="flex flex-col relative">
+          <div
+            onClick={toggleSlideCartMobile}
+            className="absolute justify-center bg-gray-200 rounded-full h-6 w-6 -mt-8 mr-4 flex items-center"
+          >
+            {cart?.items?.length > 0 && (
+              <span className="text-blue-400">{cart?.items?.length}</span>
+            )}
+          </div>
+          <BsCart4 fontSize={24} />
         </div>
         <div className="flex price-overview flex-col">
           <span className="text-xs">My Cart</span>
@@ -144,7 +158,9 @@ export function NavbarDropdown({
             )}
           </a>
         </div>
-        {cart?.items.length > 0 && <HeaderCartDropdown cart={cart} />}
+        {dropdownStatus && cart?.items.length > 0 && (
+          <HeaderCartDropdown cart={cart} />
+        )}
       </div>
       <style jsx>
         {`

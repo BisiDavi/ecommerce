@@ -8,7 +8,7 @@ const sliderArray: any = sliderContent;
 export default function TopbarSlider() {
   return (
     <div className="header-slider">
-      <Splide
+      <Splide        
         options={{
           type: "loop",
           height: "3rem",
@@ -30,21 +30,6 @@ export default function TopbarSlider() {
           </SplideSlide>
         ))}
       </Splide>
-      <style jsx>{`
-        .slider-container {
-          background-color: #373f50;
-        }
-        .icon-container {
-          height: 50px;
-          width: 60px;
-          margin: 0px 10px;
-        }
-        @media (max-width: 768px) {
-          .header-slider p {
-            font-size: 13px;
-          }
-        }
-      `}</style>
     </div>
   );
 }

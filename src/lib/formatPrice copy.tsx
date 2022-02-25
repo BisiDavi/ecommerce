@@ -53,7 +53,7 @@ export default function FormattedPrice({
   const { currency } = useAppSelector((state) => state.currencyLanguage);
 
   return (
-    <div className="d-flex align-items-baseline">
+    <div className="flex align-items-baseline">
       {status === "error" ? (
         "unable to fetch price"
       ) : status === "loading" ? (

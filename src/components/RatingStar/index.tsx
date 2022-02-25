@@ -1,3 +1,5 @@
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
 interface RatingStarProps {
   rate: number;
 }
@@ -11,12 +13,12 @@ export default function RatingStar({ rate }: RatingStarProps) {
   const inactiveRate = new Array(validInactiveRate).fill(0);
 
   return (
-    <div className="star-rating">
-      {activeRate.map((rate, index) => (
-        <i key={index} className="star-rating-icon ci-star-filled active"></i>
+    <div className="star-rating flex items-center">
+      {activeRate.map((_, index) => (
+        <AiFillStar fill="orange" className="mr-1" key={index} />
       ))}
-      {inactiveRate.map((rate, index) => (
-        <i key={index} className="star-rating-icon ci-star"></i>
+      {inactiveRate.map((_, index) => (
+        <AiOutlineStar className="mr-1" key={index} />
       ))}
     </div>
   );

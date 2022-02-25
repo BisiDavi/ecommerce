@@ -1,6 +1,7 @@
 import axios from "axios";
-import swellClientInit from "@/lib/config";
 import { useQuery } from "react-query";
+
+import swellClientInit from "@/lib/config";
 
 type filterType = {
   page: number;

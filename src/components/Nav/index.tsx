@@ -4,7 +4,7 @@ import Navmenu from "@/components/Nav/Navmenu";
 
 export default function Nav() {
   return (
-    <div className="nav bg-white w-full h-24 flex items-center justify-center border-b-2 shadow-sm">
+    <div className="nav bg-white w-full h-32 flex items-center justify-center border-b-2 shadow-sm">
       <div className="container flex justify-between items-center">
         <Logo />
         <Input
