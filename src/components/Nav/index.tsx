@@ -8,7 +8,7 @@ export default function Nav() {
       <div className="container flex justify-between items-center">
         <Logo />
         <Input
-          className="w-7/12 h-12 mx-4"
+          className="lg:w-7/12 md:5/7 h-12 mx-4"
           placeholder="Search for products..."
         />
         <Navmenu />

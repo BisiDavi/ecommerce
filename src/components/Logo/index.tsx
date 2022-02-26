@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Logo() {
   return (
     <Link href="/" passHref>
-      <a className="xl:w-1/6 w-2/3">
+      <a className="xl:w-1/6 w-1/4">
         <Image
           src="/logo.webp"
           alt="Bandicoot"
