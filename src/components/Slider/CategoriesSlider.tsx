@@ -17,6 +17,7 @@ export default function CategoriesSlider() {
         <LoadCategory arrayType={4} gridStyle="w-1/2" />
       ) : (
         <Splide
+          className="lg:px-12 px-4"
           options={{
             type: "loop",
             perPage: 2,
@@ -33,7 +34,7 @@ export default function CategoriesSlider() {
               },
               1200: {
                 perPage: 2,
-                gap: "2.0rem",
+                gap: "1.5rem",
               },
             },
           }}
