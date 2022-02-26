@@ -1,5 +1,5 @@
-import AuthModal from "@/components/modal/AuthModal";
-import ExistingUserNotificationModal from "@/components/modal/ExistingUserNotificationModal";
+import AuthModal from "@/components/Modal/AuthModal";
+import ExistingUserNotificationModal from "@/components/Modal/ExistingUserNotificationModal";
 import { typeModal } from "@/types";
 
 type modalType = {

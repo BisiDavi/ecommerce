@@ -22,7 +22,7 @@ export default function CategoriesSlider() {
             type: "loop",
             perPage: 2,
             gap: "1rem",
-            autoplay: false,
+            autoplay: true,
             breakpoints: {
               450: {
                 perPage: 2,
