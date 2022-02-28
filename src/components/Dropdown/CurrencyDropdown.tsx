@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { memo } from "react";
 
 import Dropdown from "@/components/Dropdown";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
@@ -10,14 +11,13 @@ interface Props {
   position?: string;
 }
 
-export default function CurrencyDropdown({ position }: Props) {
+function CurrencyDropdownComponent() {
   const dispatch = useAppDispatch();
   const { isLoading, isSuccessful, hasError } = useToast();
   const { selectCurrencies } = useCurrency();
   const [currencies, status] = useCurrencies();
 
   const { currency } = useAppSelector((state) => state.currencyLanguage);
-  // const footerStyle = position === "bottom" ? styles.bottom : "";
 
   function selectCurrency(e: any): any {
     const loading = isLoading();
@@ -53,3 +53,6 @@ export default function CurrencyDropdown({ position }: Props) {
     </Dropdown>
   );
 }
+
+const CurrencyDropdown = memo(CurrencyDropdownComponent);
+export default CurrencyDropdown;

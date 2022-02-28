@@ -6,30 +6,21 @@ import {
 
 export default function BottomFooter() {
   return (
-    <div className="w-full bg-gray-700 h-60">
-      <div className="footerBottom pt-5">
-        <div className="container">
-          <FooterBottomFeatures />
-          <hr className="hr-light mb-5" />
-          <div className="row pb-2">
-            <FooterBottomWidgets />
-            <FooterBottomSocials />
-          </div>
-          <div className="pb-4 fs-xs text-light opacity-50 text-center text-md-start">
-            © All rights reserved. Made by{" "}
-            <a className="text-light" href="#" target="_blank" rel="noreferrer">
-              Bandicoot Studio
-            </a>
-          </div>
+    <div className="w-full bg-gray-800 py-6">
+      <div className="container flex flex-col m-auto justify-center">
+        <FooterBottomFeatures />
+        <hr className="hr-light mb-5" />
+        <div className="flex items-center justify-between">
+          <FooterBottomWidgets />
+          <FooterBottomSocials />
+        </div>
+        <div className="pb-4 text-gray-400 text-xs">
+          © All rights reserved. Made by{" "}
+          <a className="text-red-500" href="#" target="_blank" rel="noreferrer">
+            Bandicoot Studio
+          </a>
         </div>
       </div>
-      <style jsx>
-        {`
-          .footerBottom {
-            background-color: #2b3445;
-          }
-        `}
-      </style>
     </div>
   );
 }

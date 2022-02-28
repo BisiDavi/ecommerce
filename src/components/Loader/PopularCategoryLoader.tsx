@@ -33,7 +33,7 @@ function PopularCategoryLoader(props: any) {
       style={loaderStyle}
       backgroundColor="#b5a6a6"
       foregroundColor="#ecebeb"
-      className="m-2 my-4 my-lg-2"
+      className="w-full md:w-1/3"
       {...props}
     >
       <rect
@@ -60,7 +60,7 @@ export default function LoadingPopularCategory() {
   const newPopularCategories = new Array(3).fill(0);
 
   return (
-    <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
+    <div className="flex flex-col md:flex-row items-center justify-center">
       {newPopularCategories.map((category, index) => (
         <PopularCategoryLoader key={index} />
       ))}

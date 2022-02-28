@@ -7,7 +7,7 @@ export function ProductLoader(props: any) {
     <ContentLoader
       speed={2}
       viewBox="0 0 250 250"
-      className="w-full"
+      className="mx-4"
       backgroundColor="#e3d9d9"
       foregroundColor="#ada4a4"
       title="loading product..."
@@ -31,14 +31,14 @@ export default function LoadProducts() {
   const mobileStyle = mobileWidth
     ? "w-full"
     : mediumTabWidth
-    ? "w-1/2"
+    ? "w-1/2 mx-2"
     : tabWidth
-    ? "w-1/4"
-    : "w-1/3";
+    ? "w-1/3 mx-2"
+    : "w-1/4";
 
   const productsArray = new Array(8).fill(0);
   return (
-    <div className="row">
+    <div className="flex flex-wrap mt-4">
       {productsArray.map((_, index: number) => (
         <div key={index} className={mobileStyle}>
           <ProductLoader />

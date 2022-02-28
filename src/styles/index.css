@@ -5,7 +5,6 @@
 
 @import "tailwindcss/utilities";
 
-
 /* top bar slider */
 .header-slider .splide__arrows {
   display: none;
@@ -18,4 +17,12 @@ ul.splide__pagination {
 
 .splide__track {
   margin-right: 30px;
+}
+/* homepage slider */
+.carousel .splide__track {
+  margin: 0px;
+}
+
+.carousel .splide__pagination{
+  display:none;
 }
