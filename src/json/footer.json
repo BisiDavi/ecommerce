@@ -1,0 +1,82 @@
+{
+  "section1": [
+    {
+      "name": "Collections",
+      "links": [
+        { "name": "Personal Care", "slug": "personal-care" },
+        { "name": "Medicines", "slug": "medicines" },
+        { "name": "Beauty", "slug": "beauty" },
+        { "name": "Medical Aids", "slug": "medical-aids" },
+        { "name": "Hair Colours", "slug": "hair-colours" },
+        {
+          "name": "Veterinary and Pet Care",
+          "slug": "veterinary-and-pet-care"
+        },
+        { "name": "Confectionery", "slug": "confectionery" },
+        { "name": "Health", "slug": "health" }
+      ]
+    },
+    {
+      "group": [
+        {
+          "name": "Account & shipping info",
+          "links": [
+            { "name": "Your account", "slug": "#" },
+            { "name": "Shipping rates & policies", "slug": "#" },
+            { "name": "Refunds & replacements", "slug": "#" },
+            { "name": "Order tracking", "slug": "#" },
+            { "name": "Delivery info", "slug": "#" },
+            { "name": "Taxes & fees", "slug": "#" }
+          ]
+        },
+        {
+          "name": "About us",
+          "links": [
+            { "name": "About company", "slug": "about-us" },
+            { "name": "Contacts", "slug": "contact-us" },
+            { "name": "News", "slug": "blog" }
+          ]
+        }
+      ]
+    }
+  ],
+  "section2": {
+    "points": [
+      {
+        "title": "Fast and Free delivery",
+        "text": "Free delivery for all orders over $200",
+        "icon": "ci-rocket text-primary"
+      },
+      {
+        "title": "Money back guarantee",
+        "text": "We return money within 30 days",
+        "icon": "ci-currency-exchange text-primary"
+      },
+      {
+        "title": "24/7 customer support",
+        "text": "Friendly 24/7 customer support",
+        "icon": "ci-support text-primary"
+      },
+      {
+        "title": "Secure online payment",
+        "text": "We possess SSL/Secure certificate",
+        "icon": "ci-card text-primary"
+      }
+    ],
+    "socialIcons": [
+      "ci-twitter",
+      "ci-facebook",
+      "ci-instagram",
+      "ci-pinterest",
+      "ci-youtube"
+    ],
+    "paymentMethod": "/payment-cards.png",
+    "footerLinks": [
+      { "name": "Outlets", "slug": "#" },
+      { "name": "Affiliates", "slug": "#" },
+      { "name": "Support", "slug": "#" },
+      { "name": "Privacy", "slug": "#" },
+      { "name": "Terms of use", "slug": "#" }
+    ]
+  }
+}

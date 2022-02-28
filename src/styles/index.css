@@ -5,6 +5,17 @@
 
 @import "tailwindcss/utilities";
 
+
+/* top bar slider */
 .header-slider .splide__arrows {
   display: none;
+}
+
+ul.splide__pagination {
+  height: 70px;
+  margin-top: -10px;
+}
+
+.splide__track {
+  margin-right: 30px;
 }
