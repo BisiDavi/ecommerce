@@ -33,29 +33,25 @@ export default function TopFooter() {
   }
 
   return (
-    <div className="w-full bg-gray-600 h-32">
-      <div className="topSection pt-5">
-        <div className="container">
-          <div className="flex">
-            {footerContent.section1.map((content, index) => {
-              return content.group ? (
-                <FooterLink
-                  key={index}
-                  content={content}
-                  onClickHandler={categoryEvents}
-                  multiple
-                />
-              ) : (
-                <FooterLink
-                  key={index}
-                  content={content}
-                  onClickHandler={selectedFooterCategory}
-                />
-              );
-            })}
-            <Footernewsletter />
-          </div>
-        </div>
+    <div className="w-full bg-gray-700 justify-center flex py-6">
+      <div className="container flex">
+        {footerContent.section1.map((content, index) => {
+          return content.group ? (
+            <FooterLink
+              key={index}
+              content={content}
+              onClickHandler={categoryEvents}
+              multiple
+            />
+          ) : (
+            <FooterLink
+              key={index}
+              content={content}
+              onClickHandler={selectedFooterCategory}
+            />
+          );
+        })}
+        <Footernewsletter />
       </div>
       <style jsx>
         {`

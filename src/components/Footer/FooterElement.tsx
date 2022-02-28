@@ -14,13 +14,16 @@ function FooterWidgetLink({
     ? (contentLink: any) => onClickHandler(contentLink.name)
     : (contentLink: any) => onClickHandler(contentLink);
   return (
-    <div className="widget widget-links widget-light pb-2 mb-4">
-      <h3 className="widget-title text-light">{groupedContent.name}</h3>
-      <ul className="widget-list">
+    <div className="pb-2 mb-4">
+      <h3 className="text-gray-300 text-xl font-bold">{groupedContent.name}</h3>
+      <ul className="text-gray-400 ">
         {groupedContent.links.map((contentLink: any, index: number) => (
           <li key={index} className="widget-list-item">
             <Link href={slug(contentLink)} passHref>
-              <a onClick={onClickFunc} className="widget-list-link">
+              <a
+                onClick={onClickFunc}
+                className="widget-list-link hover:text-white"
+              >
                 {contentLink.name}
               </a>
             </Link>
@@ -33,7 +36,7 @@ function FooterWidgetLink({
 
 export default function FooterLink({ content, multiple, onClickHandler }: any) {
   return (
-    <div className="col-md-4 col-sm-6">
+    <div className="w-1/3">
       {multiple ? (
         content.group.map((groupedContent: any, index: number) => (
           <FooterWidgetLink

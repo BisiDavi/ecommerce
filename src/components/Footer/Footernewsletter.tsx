@@ -1,13 +1,13 @@
 export default function Footernewsletter() {
   return (
-    <div className="col-md-4">
-      <div className="widget pb-2 mb-4">
-        <h3 className="widget-title text-light pb-1">Stay informed</h3>
-        <div className="subscription-form validate">
-          <div className="input-group flex-nowrap">
+    <div className="w-1/3">
+      <div className=" pb-2 mb-4">
+        <h3 className="text-xl text-gray-300 font-bold">Stay informed</h3>
+        <div className="subscription-form validate flex flex-col">
+          <div className="input-group flex-nowrap my-2">
             <i className="ci-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
             <input
-              className="form-control rounded-start"
+              className="form-control rounded-l-full p-2 border-0"
               type="email"
               name="EMAIL"
               placeholder="Your email"
@@ -15,35 +15,18 @@ export default function Footernewsletter() {
             />
             <button
               aria-label="Subscribe to Newsletter"
-              className="btn btn-primary"
+              className="bg-red-500 hover:bg-red-700 p-2 px-4 border-0 rounded-r-full text-white font-bold"
               type="submit"
               name="subscribe"
             >
-              Subscribe*
+              Subscribe
             </button>
           </div>
-          <div className="form-text text-light opacity-50">
+          <div className="form-text text-gray-200 mt-1">
             *Subscribe to our newsletter to receive early discount offers,
             updates and new products info.
           </div>
           <div className="subscription-status"></div>
-        </div>
-      </div>
-      <div className="widget pb-2 mb-4">
-        <h3 className="widget-title text-light pb-1">Download our app</h3>
-        <div className="d-flex flex-wrap">
-          <div className="me-2 mb-2">
-            <a className="btn-market btn-apple" href="#" role="button">
-              <span className="btn-market-subtitle">Download on the</span>
-              <span className="btn-market-title">App Store</span>
-            </a>
-          </div>
-          <div className="mb-2">
-            <a className="btn-market btn-google" href="#" role="button">
-              <span className="btn-market-subtitle">Download on the</span>
-              <span className="btn-market-title">Google Play</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>
