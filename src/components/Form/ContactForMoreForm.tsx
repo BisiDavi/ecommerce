@@ -46,7 +46,7 @@ export default function ContactForMoreForm({ setStage }: any): JSX.Element {
           <button
             aria-label="Submit form"
             type="submit"
-            className="btn d-flex m-auto btn-accent mt-2"
+            className="btn flex m-auto btn-accent mt-2"
           >
             Submit
           </button>

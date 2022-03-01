@@ -27,7 +27,7 @@ export default function ContactForMoreModal({
         className="bg-secondary border-0"
         closeButton
       ></Modal.Header>
-      <div className="d-flex title flex-column m-auto">
+      <div className="flex title flex-col m-auto">
         <h4 className="text-center mb-0">Larger Order Enquiry</h4>
         <p className="mb-0 text-center">for</p>
         <h4 className="text-center mb-0">{productName}</h4>
@@ -41,7 +41,7 @@ export default function ContactForMoreModal({
 
 function ContactMessage() {
   return (
-    <div className="d-flex m-auto text-center flex-column mb-3">
+    <div className="flex m-auto text-center flex-col mb-3">
       <div className="text">
         <p className="mb-0">Thank you for your message.</p>
         <p>We will be in touch with you shortly.</p>

@@ -31,8 +31,8 @@ export default function StripePaymentMethod() {
   }
 
   return (
-    <div className="row px-0 d-flex flex-column">
-      <div className="d-flex mx-auto justify-content-center">
+    <div className="row px-0 flex flex-col">
+      <div className="flex mx-auto justify-center">
         {inputRef === null && <SpinnerRipple />}
       </div>
       <PaymentInput inputRef={inputRef} />

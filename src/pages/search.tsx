@@ -34,11 +34,11 @@ export default function SearchPage() {
       <Metatag />
       <div ref={parentRef} className="container">
         <h5 className="text-center my-5">
-          <span className="fw-bold text-danger">
+          <span className="font-bold text-danger">
             ({searchData.length}) products
           </span>{" "}
-          found from <span className="fw-bold text-danger">{query.query}</span>{" "}
-          search{" "}
+          found from{" "}
+          <span className="font-bold text-danger">{query.query}</span> search{" "}
         </h5>
         <div className="row pt-4 mx-n2">
           {rowVirtualizer.virtualItems.map((virtualRow) => (

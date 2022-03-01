@@ -22,7 +22,7 @@ export default function About() {
           <div className="row pt-3">
             {aboutUsContent.coreTeam.teams.map((team) => (
               <div key={team.name} className="col-lg-4 col-sm-6 mb-grid-gutter">
-                <div className="d-flex align-items-center">
+                <div className="flex items-center">
                   <img
                     className="rounded-circle"
                     src={team.image}

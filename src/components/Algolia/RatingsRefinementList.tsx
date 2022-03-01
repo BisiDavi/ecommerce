@@ -11,11 +11,11 @@ export default function RatingsRefinementList({
     refine(item.value);
   }
   return (
-    <div className="widget widget-categories d-flex flex-column">
+    <div className="widget widget-categories flex flex-col">
       <h3 className="widget-title">Ratings</h3>
       {items.map((item: { label: number; count: number }, index: number) => (
         <div
-          className="my-1 d-flex align-items-center justify-content-between"
+          className="my-1 flex items-center justify-content-between"
           key={index}
         >
           <a

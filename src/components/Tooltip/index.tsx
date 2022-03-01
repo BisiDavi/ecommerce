@@ -91,7 +91,7 @@ export default function Tooltip({ children, text }: PropsWithChildren<Props>) {
 
           .Tooltip-Tip.bottom::before {
             bottom: 100%;
-            border-bottom-color: var(black);
+            border-b-4-color: var(black);
           }
 
           .Tooltip-Tip.left {

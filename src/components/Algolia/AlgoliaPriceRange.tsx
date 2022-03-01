@@ -45,7 +45,7 @@ export default function RangeSlider({
 
   return (
     <>
-      <div className="widget mb-4 pb-4 border-bottom">
+      <div className="widget mb-4 pb-4 border-b-4">
         <h3 className="widget-title">Price</h3>
         <Nouislider
           step={10}
@@ -61,8 +61,8 @@ export default function RangeSlider({
           onUpdate={priceSlider}
           tooltips={true}
         />
-        <div className="d-flex">
-          <div className="d-flex pb-1">
+        <div className="flex">
+          <div className="flex pb-1">
             <div className="w-50 pe-2 me-2">
               <div className="input-group input-group-sm">
                 <span className="input-group-text">$ </span>

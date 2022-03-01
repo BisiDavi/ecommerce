@@ -28,7 +28,7 @@ export default function PopularCategory({ category }: PopularCategoryProps) {
       <Link href={`/collections/product-type/${category.slug}`} passHref>
         <a
           onClick={() => selectedFooterCategory(category.name)}
-          className="imgLink d-flex flex-column text-center text-decoration-none"
+          className="imgLink flex flex-col text-center text-decoration-none"
         >
           <Image
             height={size.height}

@@ -107,7 +107,7 @@ export function Input({ content, formik, className }: Props) {
 
 export function TextArea({ content, formik }: Props) {
   return (
-    <div className="textarea d-flex flex-column">
+    <div className="textarea flex flex-col">
       <textarea
         className="form-control"
         rows={5}

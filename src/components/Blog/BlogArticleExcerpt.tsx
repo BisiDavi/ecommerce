@@ -38,7 +38,7 @@ export default function BlogArticleExcerpt({ content }: blogExcerpt) {
             </a>
           ))}
         </div>
-        <div className="card-footer d-flex align-items-center fs-xs">
+        <div className="card-footer flex items-center fs-xs">
           <a className="blog-entry-meta-link" href="#">
             <div className="blog-entry-author-ava">
               <img src={content.authorImage} alt={content.author} />

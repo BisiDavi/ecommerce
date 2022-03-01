@@ -115,13 +115,13 @@ function AirwallexCardElement({
   return (
     <div>
       {!elementShow && (
-        <div className="loader d-flex m-auto justify-content-center">
+        <div className="loader flex m-auto justify-center">
           <SpinnerRipple />
         </div>
       )}
       {errorMessage.length > 0 && (
         <p
-          className="alert bg-danger text-white text-center fw-bold"
+          className="alert bg-danger text-white text-center font-bold"
           id="error"
         >
           {errorMessage}
@@ -130,7 +130,7 @@ function AirwallexCardElement({
       <div className={`field-container ${fieldContainerStyle}`}>
         <div id="airwallexCard" className="form-control" />
         <button
-          className="btn btn-outline-primary d-flex m-auto mt-4 mb-2"
+          className="btn btn-outline-primary flex m-auto mt-4 mb-2"
           onClick={triggerConfirm}
           aria-label="Make Payment"
           disabled={isSubmitting}

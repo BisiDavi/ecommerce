@@ -32,7 +32,7 @@ export default function ProductDetail({ product }: Props) {
           onHide={toggleModal}
           productName={product.name}
         />
-        <div className="d-flex justify-content-between align-items-center mb-2">
+        <div className="flex justify-content-between items-center mb-2">
           <Rating product={product} />
           <button
             className="btn-wishlist me-0 me-lg-n3"
@@ -44,8 +44,8 @@ export default function ProductDetail({ product }: Props) {
             <i className="ci-heart"></i>
           </button>
         </div>
-        <div className="mb-3 d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center">
+        <div className="mb-3 flex items-center justify-content-between">
+          <div className="flex items-center">
             <span className="h3 fw-normal text-accent me-1">
               <FormattedPrice price={product.price} isProduct />
             </span>
@@ -62,7 +62,7 @@ export default function ProductDetail({ product }: Props) {
           </span>
         </div>
         <ProductForm product={product} />
-        <div className="d-flex flex-column flex-start align-items-start">
+        <div className="flex flex-col flex-start align-items-start">
           <Link
             href={`/collections/vendors/${replaceSpaceWithHypen(
               product.vendor

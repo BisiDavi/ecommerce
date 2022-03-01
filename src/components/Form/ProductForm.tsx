@@ -9,10 +9,14 @@ const ProductBoxTable: any = dynamic((): any =>
   import("@/components/Products/ProductView").then((mod) => mod.ProductBoxTable)
 );
 const ProductOptionSelect: any = dynamic((): any =>
-  import("@/components/Products/ProductView").then((mod) => mod.ProductOptionSelect)
+  import("@/components/Products/ProductView").then(
+    (mod) => mod.ProductOptionSelect
+  )
 );
 const ProductOptionSelectBox: any = dynamic((): any =>
-  import("@/components/Products/ProductView").then((mod) => mod.ProductOptionSelectBox)
+  import("@/components/Products/ProductView").then(
+    (mod) => mod.ProductOptionSelectBox
+  )
 );
 
 const ProductColorOption: any = dynamic((): any =>
@@ -67,7 +71,7 @@ export default function ProductForm({ product }: ProductFormType) {
 
   const optionsClassName = counterType?.box
     ? "mb-3 align-items-end"
-    : "mb-3 align-items-center";
+    : "mb-3 items-center";
 
   const formBg = useCallback((name: string) => {
     const style = { backgroundColor: name.toLowerCase() };

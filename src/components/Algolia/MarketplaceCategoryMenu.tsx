@@ -21,7 +21,7 @@ export function CategoriesList({
   }
 
   return (
-    <div className="widget widget-categories mb-4 pb-0 border-bottom">
+    <div className="widget widget-categories mb-4 pb-0 border-b-4">
       <h3 className="widget-title">Product Type</h3>
       <div className="input-group input-group-sm mb-2">
         <input

@@ -7,13 +7,13 @@ import productBox from "@/json/info-section.json";
 
 export function PaymentNote() {
   return (
-    <div className="payment-partners d-flex flex-column mt-5">
+    <div className="payment-partners flex flex-col mt-5">
       <img
         src="/img/payment-card.png"
         className="payment-card"
         alt="we are accept visa, mastercard cards and bank transfers"
       />
-      <div className="secured-by d-flex align-items-center mt-2">
+      <div className="secured-by flex items-center mt-2">
         <i className="fas fa-lock me-2"></i>
         <p className="text-muted me-2 mb-0">
           Transactions secured by Stripe & Airwallex
@@ -101,8 +101,8 @@ export function ProductOptionSelectBox({
   quantityArr,
 }: ProductOptionSelectBoxProps) {
   return (
-    <div className="d-flex flex-column w-50">
-      <label htmlFor="selectProductQuantity fw-bold">Cartons</label>
+    <div className="flex flex-col w-50">
+      <label htmlFor="selectProductQuantity font-bold">Cartons</label>
       <select
         name="productQty"
         className="form-select"
@@ -148,13 +148,13 @@ export function ProductQuantityCounter({
   }
 
   return (
-    <div className="d-flex align-items-center mb-2">
-      <div className="cartCounter w-50 d-flex align-items-center mb-0">
+    <div className="flex items-center mb-2">
+      <div className="cartCounter w-50 flex items-center mb-0">
         <button
           aria-label="Remove"
           onClick={() => updateCounter("decrement")}
           type="button"
-          className="p-2 d-flex align-items-center justify-content-center btn btn-danger text-white"
+          className="p-2 flex items-center justify-center btn btn-danger text-white"
         >
           -
         </button>
@@ -167,7 +167,7 @@ export function ProductQuantityCounter({
           aria-label="Add"
           onClick={() => updateCounter("increment")}
           type="button"
-          className={`p-2 d-flex align-items-center justify-content-center btn btn-success text-white`}
+          className={`p-2 flex items-center justify-center btn btn-success text-white`}
         >
           +
         </button>
@@ -198,7 +198,7 @@ export function ProductQuantityCounter({
 
 export function ShareProductLink() {
   return (
-    <div className="d-flex align-items-center">
+    <div className="flex items-center">
       <label className="form-label d-inline-block align-middle my-2 me-3">
         Share:
       </label>

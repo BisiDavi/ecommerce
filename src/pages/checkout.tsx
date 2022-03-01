@@ -11,7 +11,9 @@ import SpinnerRipple from "@/components/Loader/SpinnerLoader";
 const DynamicCheckoutSidebar = dynamic(
   () => import("@/components/Sidebar/CheckoutSidebar")
 );
-const DynamicCheckoutForm = dynamic(() => import("@/components/Form/CheckoutForm"));
+const DynamicCheckoutForm = dynamic(
+  () => import("@/components/Form/CheckoutForm")
+);
 const CheckoutWelcomeBanner = dynamic(
   () => import("@/components/Banner/CheckoutWelcomeBanner")
 );
@@ -27,14 +29,14 @@ export default function Checkout() {
       <CheckoutBanner title="Checkout" breadcrumb="Checkout" />
       <div className="container checkout-page-content">
         <div className="row mb-5">
-          <section className="col-lg-8 d-flex flex-column">
+          <section className="col-lg-8 flex flex-col">
             <CheckoutWelcomeBanner />
             <DynamicCheckoutForm />
           </section>
           {cart ? (
             <DynamicCheckoutSidebar cart={cart} />
           ) : (
-            <div className="loader d-flex col-lg-4 justify-content-center m-auto">
+            <div className="loader flex col-lg-4 justify-center m-auto">
               <SpinnerRipple />
             </div>
           )}

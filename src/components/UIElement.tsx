@@ -22,7 +22,7 @@ export function Button({
   const btnType = type ? type : "button";
   return (
     <button
-      className={`btn position-relative d-flex justify-content-center align-items-center ${className}`}
+      className={`btn position-relative flex justify-center items-center ${className}`}
       disabled={disableBtn}
       onClick={onClick}
       type={btnType}

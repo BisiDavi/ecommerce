@@ -17,7 +17,7 @@ export function TagsList({
     refine(item.value);
   }
   return (
-    <div className="widget widget-categories mb-4 pb-4 border-bottom">
+    <div className="widget widget-categories mb-4 pb-4 border-b-4">
       <h3 className="widget-title">Tags</h3>
       <div className="input-group input-group-sm mb-2">
         <input

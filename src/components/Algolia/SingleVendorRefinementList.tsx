@@ -29,7 +29,7 @@ export function SingleVendorList({
   const selectedVendor = (item: string) => {
     // console.log("item selectedVendor", item);
     // console.log("item pathname", pathname);
-    pathname.includes(item) ? "fw-bold text-danger" : "";
+    pathname.includes(item) ? "font-bold text-danger" : "";
   };
 
   function searchItems(e: any) {
@@ -37,7 +37,7 @@ export function SingleVendorList({
   }
 
   return (
-    <div className="widget widget-categories mb-4 pb-4 border-bottom">
+    <div className="widget widget-categories mb-4 pb-4 border-b-4">
       <h3 className="widget-title">Vendors</h3>
       <div className="input-group input-group-sm mb-2">
         <input

@@ -62,7 +62,7 @@ export default function ShippingCheckoutForm(): JSX.Element {
                   aria-label="proceed with shipping"
                   type="submit"
                   disabled={formik.isSubmitting}
-                  className="btn btn-outline-primary d-flex mt-3 mb-2 mx-auto font-bold"
+                  className="btn btn-outline-primary flex mt-3 mb-2 mx-auto font-bold"
                 >
                   Proceed
                 </button>

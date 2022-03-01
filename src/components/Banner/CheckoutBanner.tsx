@@ -6,13 +6,16 @@ interface CheckoutBannerProps {
   breadcrumb: string;
 }
 
-export default function CheckoutBanner({ title, breadcrumb }: CheckoutBannerProps) {
+export default function CheckoutBanner({
+  title,
+  breadcrumb,
+}: CheckoutBannerProps) {
   return (
     <div className="page-title-overlap bg-dark pt-4 w-100">
       <div className="container d-lg-flex justify-content-between py-2 py-lg-3">
         <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
           <nav aria-label="breadcrumb">
-            <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
+            <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-center justify-content-lg-start">
               <li className="breadcrumb-item">
                 <Link href="/" passHref>
                   <a className="text-nowrap">

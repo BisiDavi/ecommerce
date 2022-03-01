@@ -22,11 +22,11 @@ export default function AccountPasswordRecovery() {
             className="alert bg-danger text-white text-center col-8 mb-5 mx-auto"
           >
             Reset password link has been sent to{" "}
-            <span className="fw-bold">{recoveryStatus?.email}</span>, please
+            <span className="font-bold">{recoveryStatus?.email}</span>, please
             check your e-mail
           </div>
         )}
-        <div className="row justify-content-center">
+        <div className="row justify-center">
           <div className="col-lg-8 col-md-10">
             <h2 className="h3 mb-4">Forgot your password?</h2>
             <p className="fs-md">

@@ -12,7 +12,7 @@ interface CheckoutSidebarProps {
 
 function OrderSummaryItem({ item }: any) {
   return (
-    <div className="d-flex align-items-center py-2 border-bottom">
+    <div className="flex items-center py-2 border-b-4">
       <Link href={`/products/${item.product.slug}`} passHref>
         <a className="d-block flex-shrink-0">
           <img
@@ -28,7 +28,7 @@ function OrderSummaryItem({ item }: any) {
             <a>{item.product.name}</a>
           </Link>
         </h6>
-        <div className="widget-product-meta d-flex align-items-baseline">
+        <div className="widget-product-meta flex align-items-baseline">
           <span className="text-accent me-2">
             <FormattedPrice price={item.price} />
           </span>
@@ -48,7 +48,7 @@ export default function CheckoutSidebar({ cart }: CheckoutSidebarProps) {
         <div className="py-2 px-xl-2">
           <div className="widget mb-3">
             <h2 className="widget-title text-center">Order summary</h2>
-            <div className="products-list d-flex flex-column">
+            <div className="products-list flex flex-col">
               {cart &&
                 cart.items.map((item: itemType, index: number) => (
                   <OrderSummaryItem
@@ -59,26 +59,26 @@ export default function CheckoutSidebar({ cart }: CheckoutSidebarProps) {
             </div>
           </div>
           {cart && (
-            <ul className="list-unstyled fs-sm pb-2 border-bottom">
-              <li className="d-flex justify-content-between align-items-center">
+            <ul className="list-unstyled fs-sm pb-2 border-b-4">
+              <li className="flex justify-content-between items-center">
                 <span className="me-2">Subtotal:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.subTotal} />
                 </span>
               </li>
-              <li className="d-flex justify-content-between align-items-center">
+              <li className="flex justify-content-between items-center">
                 <span className="me-2">Shipping:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.shipmentTotal} />
                 </span>
               </li>
-              <li className="d-flex justify-content-between align-items-center">
+              <li className="flex justify-content-between items-center">
                 <span className="me-2">Taxes:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.taxTotal} />
                 </span>
               </li>
-              <li className="d-flex justify-content-between align-items-center">
+              <li className="flex justify-content-between items-center">
                 <span className="me-2">Discount:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.discountTotal} />

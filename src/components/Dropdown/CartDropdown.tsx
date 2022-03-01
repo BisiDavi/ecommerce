@@ -17,12 +17,12 @@ export default function CartDropdown({ cart }: Props) {
   return (
     <div className="dropdown-menu dropdown-menu-end">
       <div className="widget widget-cart px-3 pt-2 pb-3">
-        <div className="product-group flex flex-column">
+        <div className="product-group flex flex-col">
           {cart?.items.map((item: cartType, index: number) => (
             <CartWidget key={`item.productId-${index}`} cart={item} />
           ))}
         </div>
-        <div className="flex flex-wrap justify-content-between align-items-center py-3">
+        <div className="flex flex-wrap justify-content-between items-center py-3">
           <div className="fs-sm me-2 py-2 align-items-baseline">
             <span className="text-muted">Subtotal:</span>
             <span className="text-accent fs-base ms-1">

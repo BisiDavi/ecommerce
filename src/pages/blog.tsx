@@ -5,12 +5,9 @@ import Applayout from "@/layout/Applayout";
 import blogContent from "@/json/blog.json";
 import BlogArticleExcerpt from "@/components/Blog/BlogArticleExcerpt";
 
-const BlogSlider = dynamic(
-  () => import("@/components/Slider/BlogGridSlider"),
-  {
-    ssr: false,
-  }
-);
+const BlogSlider = dynamic(() => import("@/components/Slider/BlogGridSlider"), {
+  ssr: false,
+});
 
 const DynamicBlogPagination = dynamic(
   () => import("../components/Blog/BlogListPagination")
@@ -23,7 +20,7 @@ export default function Blog() {
         <div className="container d-lg-flex justify-content-between py-2 py-lg-3">
           <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
             <nav aria-label="breadcrumb">
-              <ol className="breadcrumb flex-lg-nowrap justify-content-center justify-content-lg-start">
+              <ol className="breadcrumb flex-lg-nowrap justify-center justify-content-lg-start">
                 <li className="breadcrumb-item">
                   <Link href="/index" passHref>
                     <a className="text-nowrap">

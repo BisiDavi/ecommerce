@@ -60,7 +60,7 @@ export default function ProductListForm({ product }: ProductProps) {
               ))}
             </div>
           ) : option?.name === "Size" ? (
-            <div key={option.id} className="d-flex mb-2">
+            <div key={option.id} className="flex mb-2">
               <select
                 className="form-select select-size form-select-sm me-2"
                 onChange={optionHandler}
@@ -87,7 +87,7 @@ export default function ProductListForm({ product }: ProductProps) {
         })
       ) : (
         <button
-          className="btn btn-primary btn-sm m-auto d-flex align-items-center"
+          className="btn btn-primary btn-sm m-auto flex items-center"
           type="submit"
           aria-label="Add to Cart"
         >

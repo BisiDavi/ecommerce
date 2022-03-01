@@ -13,8 +13,8 @@ export default function DashboardSidebar() {
   return (
     <aside className="col-lg-4 pt-4 pt-lg-0 pe-xl-5">
       <div className="bg-white rounded-3 shadow-lg pt-1 mb-5 mb-lg-0">
-        <div className="d-md-flex justify-content-between align-items-center text-center text-md-start p-4">
-          <div className="d-md-flex align-items-center">
+        <div className="d-mflex justify-content-between items-center text-center text-md-start p-4">
+          <div className="d-mflex items-center">
             <div className="dashboardImg img-thumbnail rounded-circle position-relative flex-shrink-0 mx-auto mb-2 mx-md-0 mb-md-0">
               <span
                 className="badge bg-warning position-absolute end-0 mt-n2"
@@ -45,15 +45,15 @@ export default function DashboardSidebar() {
         </div>
         <div className="d-lg-block collapse" id="account-menu">
           {dashboardSidebarContent.map((sidebarContent) => (
-            <div key={sidebarContent.name} className="d-flex flex-column">
+            <div key={sidebarContent.name} className="flex flex-col">
               <div className="bg-secondary px-4 py-3">
                 <h3 className="fs-sm mb-0 text-muted">{sidebarContent.name}</h3>
               </div>
               <ul className="list-unstyled mb-0">
                 {sidebarContent.content.map((content: contentType) => (
-                  <li key={content.name} className="border-bottom mb-0">
+                  <li key={content.name} className="border-b-4 mb-0">
                     <Link href={content.link} passHref>
-                      <a className="nav-link-style d-flex align-items-center px-4 py-3">
+                      <a className="nav-link-style flex items-center px-4 py-3">
                         <i className={` ${content.icon} opacity-60 me-2`}></i>
                         {content.name}
                         <span className="fs-sm text-muted ms-auto">

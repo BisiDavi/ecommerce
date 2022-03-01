@@ -6,12 +6,9 @@ export default function ProductReviewView() {
   return (
     <div>
       {productReview.reviews.map((review) => (
-        <div
-          key={review.name}
-          className="product-review pb-4 mb-4 border-bottom"
-        >
-          <div className="d-flex mb-3">
-            <div className="d-flex align-items-center me-4 pe-2">
+        <div key={review.name} className="product-review pb-4 mb-4 border-b-4">
+          <div className="flex mb-3">
+            <div className="flex items-center me-4 pe-2">
               <img
                 className="rounded-circle"
                 src={review.authorImage}

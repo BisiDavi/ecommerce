@@ -5,7 +5,7 @@ import Applayout from "@/layout/Applayout";
 import passwordResetForm from "@/json/password-reset.json";
 import { displayFormElement } from "@/components/Form/FormElement";
 import { forgotPasswordSchema } from "@/components/Form/schema/AuthSchema";
-import { useAccount,  useToast } from "@/hooks";
+import { useAccount, useToast } from "@/hooks";
 
 export default function AccountPasswordRecovery() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function AccountPasswordRecovery() {
   return (
     <Applayout title="Reset your password">
       <div className="container py-4 py-lg-5 my-4">
-        <div className="row justify-content-center">
+        <div className="row justify-center">
           <div className="col-lg-8 col-md-10">
             <h2 className="h3 mb-4">Forgot your password?</h2>
             <p className="fs-md">

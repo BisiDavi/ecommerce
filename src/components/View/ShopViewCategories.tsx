@@ -12,7 +12,7 @@ export default function ShopViewCategories() {
         className="categoryCanvas offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1"
         id="shop-sidebar"
       >
-        <div className="offcanvas-header align-items-center shadow-sm">
+        <div className="offcanvas-header items-center shadow-sm">
           <h2 className="h5 mb-0">Filters</h2>
           <button
             className="btn-close ms-auto"

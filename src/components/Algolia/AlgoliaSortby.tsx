@@ -9,7 +9,7 @@ const SortBy = ({ items, refine, createURL }: any) => {
   }
 
   return (
-    <Dropdown className="dropdown d-flex align-items-center flex-nowrap me-3 me-sm-4 pb-3">
+    <Dropdown className="dropdown flex items-center flex-nowrap me-3 me-sm-4 pb-3">
       <Dropdown.Toggle
         className="btn btn-light dropdown-toggle text-light fs-sm me-2  d-sm-block"
         id="sort-by-dropdown"
@@ -18,7 +18,7 @@ const SortBy = ({ items, refine, createURL }: any) => {
       </Dropdown.Toggle>
       <Dropdown.Menu className="dropdown-menu">
         {items.map((item: any) => {
-          const dropdownClassName = item.isRefined ? "fw-bold" : "fst-normal";
+          const dropdownClassName = item.isRefined ? "font-bold" : "fst-normal";
           return (
             <Dropdown.Item
               key={item.value}

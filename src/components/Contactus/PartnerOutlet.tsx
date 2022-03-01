@@ -17,10 +17,7 @@ export default function PartnerOutlet() {
                 <h6>{content.address}</h6>
                 <ul className="list-unstyled mb-0">
                   {content.info.map((content) => (
-                    <li
-                      key={content.action}
-                      className="d-flex pb-3 border-bottom"
-                    >
+                    <li key={content.action} className="flex pb-3 border-b-4">
                       <i
                         className={`${content.icon} fs-lg mt-2 mb-0 text-primary`}
                       ></i>

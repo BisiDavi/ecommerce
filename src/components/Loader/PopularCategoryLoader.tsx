@@ -60,7 +60,7 @@ export default function LoadingPopularCategory() {
   const newPopularCategories = new Array(3).fill(0);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center">
+    <div className="flex flex-col w-full md:flex-row items-center justify-center">
       {newPopularCategories.map((category, index) => (
         <PopularCategoryLoader key={index} />
       ))}

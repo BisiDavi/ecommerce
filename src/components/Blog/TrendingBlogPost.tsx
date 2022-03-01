@@ -4,10 +4,10 @@ import blogContentData from "@/json/blog-list-sidebar.json";
 
 export function TrendingBlogPost() {
   return (
-    <div className="widget mb-grid-gutter pb-grid-gutter border-bottom mx-lg-2">
+    <div className="widget mb-grid-gutter pb-grid-gutter border-b-4 mx-lg-2">
       <h3 className="widget-title">Trending posts</h3>
       {blogContentData.trendingPost.map((content) => (
-        <div key={content.title} className="d-flex align-items-center mb-3">
+        <div key={content.title} className="flex items-center mb-3">
           <Link href="/blog-single" passHref>
             <a className="flex-shrink-0">
               <img
@@ -52,13 +52,13 @@ export function PopularTags() {
 
 export function BlogCategories() {
   return (
-    <div className="widget widget-links mb-grid-gutter pb-grid-gutter border-bottom mx-lg-2">
+    <div className="widget widget-links mb-grid-gutter pb-grid-gutter border-b-4 mx-lg-2">
       <h3 className="widget-title">Blog categories</h3>
       <ul className="widget-list">
         {blogContentData.categories.map((category) => (
           <li key={category.name} className="widget-list-item">
             <a
-              className="widget-list-link d-flex justify-content-between align-items-center"
+              className="widget-list-link flex justify-content-between items-center"
               href="#"
             >
               <span>{category.name}</span>

@@ -31,7 +31,7 @@ export default function OrderTracking() {
               {contentData.group2.map((content) => (
                 <li key={content.icon} className="nav-item">
                   <div className="nav-link completed">
-                    <div className="d-flex align-items-center">
+                    <div className="flex items-center">
                       <div className="media-tab-media">
                         <i className={content.icon}></i>
                       </div>
@@ -50,7 +50,7 @@ export default function OrderTracking() {
             </ul>
           </div>
         </div>
-        <div className="d-sm-flex flex-wrap justify-content-between align-items-center text-center pt-4">
+        <div className="d-sm-flex flex-wrap justify-content-between items-center text-center pt-4">
           <div className="form-check mt-2 me-3">
             <input
               className="form-check-input"

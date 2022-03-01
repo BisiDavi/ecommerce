@@ -55,7 +55,7 @@ export default function BankTransferPaymentMethod() {
           <form onSubmit={submitHandler}>
             <table className="manualTransfer mb-3">
               <thead>
-                <tr className="border-bottom">
+                <tr className="border-b-4">
                   <th>CURRENCY</th>
                   <th>BANK LOCATION</th>
                 </tr>
@@ -63,8 +63,8 @@ export default function BankTransferPaymentMethod() {
               <tbody>
                 {checkoutFormContent.bankTransfer.content.map(
                   (content: any, index: number) => (
-                    <tr key={index} className="border-bottom">
-                      <td className="d-flex align-items-center my-1">
+                    <tr key={index} className="border-b-4">
+                      <td className="flex items-center my-1">
                         <input
                           type="radio"
                           name="bankTransfer"
@@ -72,7 +72,7 @@ export default function BankTransferPaymentMethod() {
                           value={content.vboutListCode}
                           required
                         />
-                        <div className="d-flex align-items-center">
+                        <div className="flex items-center">
                           <img
                             src={content.flag}
                             alt={content.country}
@@ -80,8 +80,10 @@ export default function BankTransferPaymentMethod() {
                             width="30px"
                             className="mx-3"
                           />
-                          <div className="currency d-flex flex-column">
-                            <h6 className="fw-bold">{content.currencyCode}</h6>
+                          <div className="currency flex flex-col">
+                            <h6 className="font-bold">
+                              {content.currencyCode}
+                            </h6>
                             <p className="text-muted">{content.currency}</p>
                           </div>
                         </div>
@@ -97,7 +99,7 @@ export default function BankTransferPaymentMethod() {
             <button
               type="submit"
               aria-label="Submit"
-              className="btn btn-outline-primary d-flex m-auto"
+              className="btn btn-outline-primary flex m-auto"
             >
               Submit
             </button>

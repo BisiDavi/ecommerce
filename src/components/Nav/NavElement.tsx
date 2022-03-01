@@ -80,15 +80,15 @@ export function AuthorizedView({
   return (
     <div className="flex items-center ms-5 me-0">
       <AiOutlineUser />
-      <div className="text flex flex-column">
+      <div className="text flex flex-col">
         <a className="navbar-tool cursor-pointer ms-1 me-n1 me-lg-2">
           <span className="navbar-tool-tooltip">
             Welcome {userDetail.firstName}
           </span>
           <div className="navbar-tool-text ms-n3">
-            <div className="flex flex-column me-3">
+            <div className="flex flex-col me-3">
               <span>Hello,</span>{" "}
-              <span className="fs-sm text-accent fw-bold">
+              <span className="fs-sm text-accent font-bold">
                 {`${userDetail.lastName} ${userDetail.firstName}`}{" "}
               </span>
             </div>

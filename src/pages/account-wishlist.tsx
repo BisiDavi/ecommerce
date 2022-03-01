@@ -18,7 +18,7 @@ export default function AccountWishlist() {
         <div className="container d-lg-flex justify-content-between py-2 py-lg-3">
           <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
             <nav aria-label="breadcrumb">
-              <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
+              <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-center justify-content-lg-start">
                 <li className="breadcrumb-item">
                   <a className="text-nowrap" href="index">
                     <i className="ci-home"></i>Home
@@ -48,7 +48,7 @@ export default function AccountWishlist() {
           {/*<!-- Content  -->*/}
           <section className="col-lg-8">
             {/*<!-- Toolbar-->*/}
-            <div className="d-none d-lg-flex justify-content-between align-items-center pt-lg-3 pb-4 pb-lg-5 mb-lg-3">
+            <div className="d-none d-lg-flex justify-content-between items-center pt-lg-3 pb-4 pb-lg-5 mb-lg-3">
               <h6 className="fs-base text-light mb-0">
                 List of items you added to wishlist:
               </h6>

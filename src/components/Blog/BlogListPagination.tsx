@@ -3,7 +3,7 @@ import { PaginationProps } from "@/types";
 export default function BlogListPagination({ pagination }: PaginationProps) {
   return (
     <nav
-      className="d-flex justify-content-between pt-2"
+      className="flex justify-content-between pt-2"
       aria-label="page-navigation"
     >
       <ul className="pagination">

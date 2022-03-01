@@ -17,7 +17,7 @@ export default function BloglistSidebar() {
         className="offcanvas offcanvas-collapse offcanvas-end border-start ms-lg-auto"
         id="blog-sidebar"
       >
-        <div className="offcanvas-header align-items-center shadow-sm">
+        <div className="offcanvas-header items-center shadow-sm">
           <h2 className="h5 mb-0">Sidebar</h2>
           <button
             className="btn-close ms-auto"
