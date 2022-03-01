@@ -33,7 +33,7 @@ const createURL = (state) => {
   }
 
   const categoryPath = state.menu.product_type
-    ? `${getCategorySlug(state.menu.product_type)}/`
+    ? `${ getCategorySlug(state.menu.product_type)}/`
     : "";
   const queryParameters = {};
 

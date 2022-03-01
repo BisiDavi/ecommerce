@@ -3,6 +3,8 @@ import Script from "next/script";
 import { PropsWithChildren } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LayoutWrapper from "@/layout/LayoutWrapper";
+
 
 interface Applayout {
   title: string;
@@ -11,7 +13,7 @@ interface Applayout {
 
 export default function Applayout({ children, title }: PropsWithChildren<Applayout>) {
   return (
-    <div>
+    <LayoutWrapper>
       <Script
         src="https://en.trustmate.io/api/widget/4420c1ed-e3a7-47c2-b6a2-2d7386a819da/script"
         strategy="afterInteractive"
@@ -28,6 +30,6 @@ export default function Applayout({ children, title }: PropsWithChildren<Applayo
         {children}
         <Footer />
       </main>
-    </div>
+    </LayoutWrapper>
   );
 }
