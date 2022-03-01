@@ -33,7 +33,7 @@ export default function BlogGridSlider() {
                   <img src={content.image} alt="Featured post" />
                 </a>
               </Link>
-              <div className="flex justify-content-between mb-2 pt-1">
+              <div className="flex justify-between mb-2 pt-1">
                 <h2 className="h5 blog-entry-title mb-0">
                   <Link href={content.link} passHref>
                     <a>{content.title}</a>

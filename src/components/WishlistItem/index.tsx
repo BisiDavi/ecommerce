@@ -16,7 +16,7 @@ interface Props {
 
 export default function WishlistItem({ content }: Props) {
   return (
-    <div className="d-sm-flex justify-content-between mt-lg-4 mb-4 pb-3 pb-sm-2 border-b-4">
+    <div className="d-sm-flex justify-between mt-lg-4 mb-4 pb-3 pb-sm-2 border-b-4">
       <div className="d-block d-sm-flex align-items-start text-center text-sm-start">
         <Link href={content.link} passHref>
           <a className="wishlistLink d-block flex-shrink-0 mx-auto me-sm-4">

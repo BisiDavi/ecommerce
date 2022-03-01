@@ -14,10 +14,7 @@ export default function RatingsRefinementList({
     <div className="widget widget-categories flex flex-col">
       <h3 className="widget-title">Ratings</h3>
       {items.map((item: { label: number; count: number }, index: number) => (
-        <div
-          className="my-1 flex items-center justify-content-between"
-          key={index}
-        >
+        <div className="my-1 flex items-center justify-between" key={index}>
           <a
             onClick={() => refineSearch(item)}
             className="btn btn-link m-0 p-0"

@@ -60,25 +60,25 @@ export default function CheckoutSidebar({ cart }: CheckoutSidebarProps) {
           </div>
           {cart && (
             <ul className="list-unstyled fs-sm pb-2 border-b-4">
-              <li className="flex justify-content-between items-center">
+              <li className="flex justify-between items-center">
                 <span className="me-2">Subtotal:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.subTotal} />
                 </span>
               </li>
-              <li className="flex justify-content-between items-center">
+              <li className="flex justify-between items-center">
                 <span className="me-2">Shipping:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.shipmentTotal} />
                 </span>
               </li>
-              <li className="flex justify-content-between items-center">
+              <li className="flex justify-between items-center">
                 <span className="me-2">Taxes:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.taxTotal} />
                 </span>
               </li>
-              <li className="flex justify-content-between items-center">
+              <li className="flex justify-between items-center">
                 <span className="me-2">Discount:</span>
                 <span className="text-end">
                   <FormattedPrice price={cart.discountTotal} />

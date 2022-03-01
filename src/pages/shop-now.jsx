@@ -5,7 +5,7 @@ import isEqual from "react-fast-compare";
 import { useEffect, useState, useRef } from "react";
 
 import searchClient from "@/lib/algoliaConfig";
-import ShoppingView from "@/components/View/ ShoppingView";
+import ShoppingView from "@/components/View/ShoppingView";
 import Applayout from "@/layout/Applayout";
 
 const updateAfter = 700;

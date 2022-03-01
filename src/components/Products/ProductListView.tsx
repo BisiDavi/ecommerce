@@ -26,7 +26,7 @@ export default function ProductListView({ product }: any) {
             <a onClick={productViewedHandler}>{product.name}</a>
           </Link>
         </h3>
-        <div className="flex justify-content-between">
+        <div className="flex justify-between">
           <div className="product-price flex align-items-baseline">
             <span className="text-accent">
               <FormattedPrice price={product.price} isProduct />

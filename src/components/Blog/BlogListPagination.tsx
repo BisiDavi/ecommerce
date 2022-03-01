@@ -2,10 +2,7 @@ import { PaginationProps } from "@/types";
 
 export default function BlogListPagination({ pagination }: PaginationProps) {
   return (
-    <nav
-      className="flex justify-content-between pt-2"
-      aria-label="page-navigation"
-    >
+    <nav className="flex justify-between pt-2" aria-label="page-navigation">
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link" href="#">

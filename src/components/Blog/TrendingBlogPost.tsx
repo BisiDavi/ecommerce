@@ -58,7 +58,7 @@ export function BlogCategories() {
         {blogContentData.categories.map((category) => (
           <li key={category.name} className="widget-list-item">
             <a
-              className="widget-list-link flex justify-content-between items-center"
+              className="widget-list-link flex justify-between items-center"
               href="#"
             >
               <span>{category.name}</span>

@@ -50,7 +50,7 @@ export default function OrderTracking() {
             </ul>
           </div>
         </div>
-        <div className="d-sm-flex flex-wrap justify-content-between items-center text-center pt-4">
+        <div className="d-sm-flex flex-wrap justify-between items-center text-center pt-4">
           <div className="form-check mt-2 me-3">
             <input
               className="form-check-input"

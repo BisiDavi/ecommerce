@@ -16,7 +16,7 @@ export default function PaymentWithStripe() {
         data-bs-parent="#payment-method"
       >
         <div className="accordion-body">
-          <div className="body-title flex items-center justify-content-between mb-2">
+          <div className="body-title flex items-center justify-between mb-2">
             <p className="fs-sm mb-0">
               We accept following credit cards:&nbsp;&nbsp;
             </p>

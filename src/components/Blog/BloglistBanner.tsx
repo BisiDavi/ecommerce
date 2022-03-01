@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function BloglistBanner() {
   return (
     <div className="bg-secondary py-4">
-      <div className="container d-lg-flex justify-content-between py-2 py-lg-3">
+      <div className="container d-lg-flex justify-between py-2 py-lg-3">
         <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb flex-lg-nowrap justify-center justify-content-lg-start">

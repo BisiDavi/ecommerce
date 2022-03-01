@@ -22,7 +22,7 @@ export default function CartDropdown({ cart }: Props) {
             <CartWidget key={`item.productId-${index}`} cart={item} />
           ))}
         </div>
-        <div className="flex flex-wrap justify-content-between items-center py-3">
+        <div className="flex flex-wrap justify-between items-center py-3">
           <div className="fs-sm me-2 py-2 align-items-baseline">
             <span className="text-muted">Subtotal:</span>
             <span className="text-accent fs-base ms-1">

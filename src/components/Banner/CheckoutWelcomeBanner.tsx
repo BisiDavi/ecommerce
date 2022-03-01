@@ -7,7 +7,7 @@ export default function CheckoutWelcomeBanner() {
   const { data: userDetails, status } = useQuery("userdetails", getUserAccount);
 
   return (
-    <div className="mt-5 d-sm-flex justify-content-between items-center bg-secondary p-4 rounded-3 mb-grid-gutter">
+    <div className="mt-5 d-sm-flex justify-between items-center bg-secondary p-4 rounded-3 mb-grid-gutter">
       {status === "error" ? (
         "unable to fetch user data"
       ) : status === "loading" ? (

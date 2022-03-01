@@ -13,7 +13,7 @@ export default function DashboardSidebar() {
   return (
     <aside className="col-lg-4 pt-4 pt-lg-0 pe-xl-5">
       <div className="bg-white rounded-3 shadow-lg pt-1 mb-5 mb-lg-0">
-        <div className="d-mflex justify-content-between items-center text-center text-md-start p-4">
+        <div className="d-mflex justify-between items-center text-center text-md-start p-4">
           <div className="d-mflex items-center">
             <div className="dashboardImg img-thumbnail rounded-circle position-relative flex-shrink-0 mx-auto mb-2 mx-md-0 mb-md-0">
               <span

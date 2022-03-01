@@ -15,7 +15,7 @@ export default function AccountWishlist() {
     <Applayout title="Your Wishlist">
       {/*<!-- Page Title-->*/}
       <div className="page-title-overlap bg-dark pt-4">
-        <div className="container d-lg-flex justify-content-between py-2 py-lg-3">
+        <div className="container d-lg-flex justify-between py-2 py-lg-3">
           <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-center justify-content-lg-start">
@@ -48,7 +48,7 @@ export default function AccountWishlist() {
           {/*<!-- Content  -->*/}
           <section className="col-lg-8">
             {/*<!-- Toolbar-->*/}
-            <div className="d-none d-lg-flex justify-content-between items-center pt-lg-3 pb-4 pb-lg-5 mb-lg-3">
+            <div className="d-none d-lg-flex justify-between items-center pt-lg-3 pb-4 pb-lg-5 mb-lg-3">
               <h6 className="fs-base text-light mb-0">
                 List of items you added to wishlist:
               </h6>

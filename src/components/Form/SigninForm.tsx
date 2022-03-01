@@ -37,7 +37,7 @@ export default function SigninForm() {
               {displayFormElement(content, formik)}
             </div>
           ))}
-          <div className="mb-3 flex flex-wrap justify-content-between">
+          <div className="mb-3 flex flex-wrap justify-between">
             <Link href="/account-password-recovery" passHref>
               <a onClick={toggleAuthmodal} className="fs-sm text-danger">
                 Forgot password?

@@ -42,7 +42,7 @@ export default function AccountSigninForm() {
                     {displayFormElement(content, formik)}
                   </div>
                 ))}
-                <div className="flex flex-wrap justify-content-between">
+                <div className="flex flex-wrap justify-between">
                   <div className="form-check">
                     <input
                       className="form-check-input"

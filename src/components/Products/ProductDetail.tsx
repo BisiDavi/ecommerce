@@ -32,7 +32,7 @@ export default function ProductDetail({ product }: Props) {
           onHide={toggleModal}
           productName={product.name}
         />
-        <div className="flex justify-content-between items-center mb-2">
+        <div className="flex justify-between items-center mb-2">
           <Rating product={product} />
           <button
             className="btn-wishlist me-0 me-lg-n3"
@@ -44,7 +44,7 @@ export default function ProductDetail({ product }: Props) {
             <i className="ci-heart"></i>
           </button>
         </div>
-        <div className="mb-3 flex items-center justify-content-between">
+        <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center">
             <span className="h3 fw-normal text-accent me-1">
               <FormattedPrice price={product.price} isProduct />

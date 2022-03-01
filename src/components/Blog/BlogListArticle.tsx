@@ -43,7 +43,7 @@ export default function BlogListArticle() {
                 </a>
               </Link>
             )}
-            <div className="flex justify-content-between mb-1">
+            <div className="flex justify-between mb-1">
               <div className="fs-sm text-muted pe-2 mb-2">
                 in{" "}
                 {content.tags.map((tag) => (

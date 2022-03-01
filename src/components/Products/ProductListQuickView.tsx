@@ -23,7 +23,7 @@ export default function ProductListQuickView({ product }: ProductProps) {
 
   return (
     <div className="row">
-      <div className="card-body card-body-hidden flex items-center justify-content-between px-5">
+      <div className="card-body card-body-hidden flex items-center justify-between px-5">
         <ProductListForm product={product} />
         <div className="text-start">
           <a
