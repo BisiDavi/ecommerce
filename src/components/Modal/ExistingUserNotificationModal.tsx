@@ -1,11 +1,9 @@
-import { useState } from "react";
 import Modal from "@/components/Modal";
 import { useRouter } from "next/router";
 
 import Image from "@/components/Image";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { toggleAuthModal } from "@/redux/ui-slice";
-import useModal from "@/hooks/useModal";
 
 export default function ExistingUserNotificationModal({ show, onHide, data }) {
   const router = useRouter();

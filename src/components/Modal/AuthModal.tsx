@@ -1,9 +1,10 @@
-import Modal from "@/components/Modal";
-import Tabs from "@/components/Tabs";
-import SignupForm from "../Form/SignupForm";
-import SigninForm from "../Form/SigninForm";
 import { GiPadlock } from "react-icons/gi";
 import { BiLogIn } from "react-icons/bi";
+
+import Modal from "@/components/Modal";
+import Tabs from "@/components/Tabs";
+import SignupForm from "@/components/Form/SignupForm";
+import SigninForm from "@/components/Form/SigninForm";
 
 interface Props {
   show: boolean;

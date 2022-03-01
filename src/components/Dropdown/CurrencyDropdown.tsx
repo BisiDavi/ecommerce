@@ -1,15 +1,11 @@
 import Image from "next/image";
 import { memo } from "react";
 
-import Dropdown from "@/components/Dropdown";
+import Dropdown, { DropdownItem } from "@/components/Dropdown";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import { updateCurrency } from "@/redux/currency-language-slice";
 import useCurrency, { useCurrencies } from "@/hooks/useCurrency";
 import { useToast } from "@/hooks";
-
-interface Props {
-  position?: string;
-}
 
 function CurrencyDropdownComponent() {
   const dispatch = useAppDispatch();
@@ -18,6 +14,22 @@ function CurrencyDropdownComponent() {
   const [currencies, status] = useCurrencies();
 
   const { currency } = useAppSelector((state) => state.currencyLanguage);
+
+  function DropdownText() {
+    return (
+      <div className="flex items-center">
+        <Image
+          className="mr-2"
+          src="/img/flags/en.png"
+          width={40}
+          height={40}
+          alt="en"
+          layout="responsive"
+        />
+        {`En / ${currency}`}
+      </div>
+    );
+  }
 
   function selectCurrency(e: any): any {
     const loading = isLoading();
@@ -38,18 +50,12 @@ function CurrencyDropdownComponent() {
   ) : status === "loading" ? (
     <p>loading currencies...</p>
   ) : (
-    <Dropdown content={currencies}>
-      <div className="flex items-center">
-        <Image
-          className="mr-2"
-          src="/img/flags/en.png"
-          width={40}
-          height={40}
-          alt="en"
-          layout="responsive"
-        />
-        {`En / ${currency}`}
-      </div>
+    <Dropdown dropdownText={<DropdownText />}>
+      {currencies.map((item, index) => (
+        <DropdownItem onClick={selectCurrency} key={index}>
+          {item.symbol} {item.code}
+        </DropdownItem>
+      ))}
     </Dropdown>
   );
 }

@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Applayout from "@/layout/Applayout";
 import { categoryType } from "@/types";
-import CollectionMarketplace from "@/components/CollectionMarketplace";
+import CollectionMarketplace from "@/components/View/CollectionMarketplace";
 import getStoreCategories from "@/lib/getStoreCategories";
 import styles from "@/styles/shop.module.css";
-import CategoryMetatag from "@/components/CategoryMetatag";
+import CategoryMetatag from "@/components/Metatag/CategoryMetatag";
 
 interface collectionProps {
   collection: categoryType;

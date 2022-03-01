@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Dispatch, SetStateAction, useState } from "react";
-// import { Modal } from "react-bootstrap";
 
+import Modal from "@/components/Modal";
 import { modalType } from "@/types";
 import ContactForMoreForm from "@/components/Form/ContactForMoreForm";
 
@@ -22,19 +22,16 @@ export default function ContactForMoreModal({
   }
 
   return (
-    <Modal show={show} onHide={onClose} role="dialog">
-      <Modal.Header
-        className="bg-secondary border-0"
-        closeButton
-      ></Modal.Header>
-      <div className="flex title flex-col m-auto">
-        <h4 className="text-center mb-0">Larger Order Enquiry</h4>
-        <p className="mb-0 text-center">for</p>
-        <h4 className="text-center mb-0">{productName}</h4>
-      </div>
-      <Modal.Body className="mb-5">
+    <Modal title="" modal={show} modalHandler={onClose}>
+      <>
+        <div className="flex title flex-col m-auto">
+          <h4 className="text-center mb-0">Larger Order Enquiry</h4>
+          <p className="mb-0 text-center">for</p>
+          <h4 className="text-center mb-0">{productName}</h4>
+        </div>
+
         {displayFormContent(stage, setStage)}
-      </Modal.Body>
+      </>
     </Modal>
   );
 }

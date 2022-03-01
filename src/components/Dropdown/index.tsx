@@ -1,10 +1,13 @@
 import { PropsWithChildren, useState } from "react";
 
 interface Props {
-  content: { symbol: string; code: string }[];
+  dropdownText: string | JSX.Element;
 }
 
-export default function index({ children, content }: PropsWithChildren<Props>) {
+export default function index({
+  dropdownText,
+  children,
+}: PropsWithChildren<Props>) {
   const [active, setActive] = useState(false);
 
   function onClickHandler() {
@@ -42,7 +45,7 @@ export default function index({ children, content }: PropsWithChildren<Props>) {
             id="dropdownMenuButton1"
             aria-expanded="false"
           >
-            {children}
+            {dropdownText}
             <svg
               aria-hidden="true"
               focusable="false"
@@ -80,10 +83,31 @@ export default function index({ children, content }: PropsWithChildren<Props>) {
         "
               aria-labelledby="dropdownMenuButton1"
             >
-              {content.map((item, index) => (
-                <li key={index}>
-                  <a
-                    className="
+              {children}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface DropdownItem {
+  onClick: (e?: any) => void;
+  className?: string;
+}
+
+export function DropdownItem({
+  onClick,
+  children,
+  className,
+}: PropsWithChildren<DropdownItem>) {
+  return (
+    <li>
+      <a
+        onClick={onClick}
+        className={`
+              ${className}
               dropdown-item
               text-sm
               py-2
@@ -95,17 +119,11 @@ export default function index({ children, content }: PropsWithChildren<Props>) {
               bg-transparent
               text-gray-700
               hover:bg-gray-100
-            "
-                    href="#"
-                  >
-                    {item.symbol} {item.code}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </div>
-    </div>
+            `}
+        href="#"
+      >
+        {children}
+      </a>
+    </li>
   );
 }

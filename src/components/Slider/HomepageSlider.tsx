@@ -48,7 +48,7 @@ function SliderItem({ item }): JSX.Element {
       </SplideSlide>
       <style jsx>{`
         .sliderItem {
-          background-color: ${item.bgColor} !important;
+          background-color: ${item.bgColor};
         }
       `}</style>
     </>

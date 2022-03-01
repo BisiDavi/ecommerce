@@ -2,7 +2,7 @@ import fetchAllSwellProducts from "@/lib/processPageproduct";
 import Metatag from "@/components/Metatag";
 
 import Applayout from "@/layout/Applayout";
-import VendorView from "@/components/VendorView";
+import VendorView from "@/components/View/VendorView";
 import toTitleCase, {
   replaceHypenWithSpace,
   replaceSpaceWithHypen,

@@ -18,7 +18,7 @@ const DynamicProductViewForm = dynamic(
 );
 
 const DynamicProductMetatags = dynamic(
-  () => import("@/components/Products/ProductMeta")
+  () => import("@/components/Metatag/ProductMeta")
 );
 declare function tcjs(trigger: string, type: string, name: string): any;
 

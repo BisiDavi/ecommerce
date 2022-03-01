@@ -102,7 +102,7 @@ export default function ProductGalleryView({ product }: Props) {
           @media (max-width: 768px) {
             .product-gallery-thumblist.order-sm-1 {
               display: flex;
-              flex-direction: row !important;
+              flex-direction: row;
               width: 100%;
               height: unset;
               overflow-y: unset;

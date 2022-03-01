@@ -1,27 +1,30 @@
+import Link from "next/link";
 import { Highlight } from "react-instantsearch-dom";
 import { connectMenu } from "react-instantsearch-dom";
-import { memo } from "react";
 
 import LoadCategorySidebar from "@/components/Loader/CategorySidebarLoader";
+import { replaceSpaceWithHypen } from "@/lib/formatString";
 
-function MarketplaceCategoriesList({
+type itemType = {
+  label: string;
+  count: number;
+  value: string;
+  isRefined: boolean;
+};
+
+function CategoriesList({
   items,
   isFromSearch,
   refine,
-  createURL,
   searchForItems,
-}) {
-  function searchItems(e) {
+  createURL,
+}: any) {
+  function searchItems(e: any) {
     searchForItems(e.currentTarget.value);
   }
 
-  function refineSearch(e, item) {
-    e.preventDefault();
-    refine(item.value);
-  }
-
   return (
-    <div className="widget widget-categories mb-4 pb-0 border-b-4">
+    <div className="widget widget-categories mb-4 pb-0 border-bottom">
       <h3 className="widget-title">Product Type</h3>
       <div className="input-group input-group-sm mb-2">
         <input
@@ -33,24 +36,27 @@ function MarketplaceCategoriesList({
         <i className="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
       </div>
       <div className="accordion mt-n1" id="shop-categories">
-        {items.length > 0 ? (
-          items.map((item) => (
+        {items?.length > 0 ? (
+          items.map((item: itemType) => (
             <div key={item.label} className="accordion-item">
               <h3 className="text-sm">
-                <a
-                  href={createURL(item.value)}
-                  onClick={(e) => refineSearch(e, item)}
-                  className="cat-link"
+                <Link
+                  href={`/collections/${replaceSpaceWithHypen(item.value)}`}
+                  passHref
                 >
-                  {isFromSearch ? (
-                    <Highlight attribute="label" hit={item} />
-                  ) : (
-                    <>
-                      {item.label}
-                      <span className="mx-2 badge bg-danger">{item.count}</span>
-                    </>
-                  )}
-                </a>
+                  <a className="cat-link">
+                    {isFromSearch ? (
+                      <Highlight attribute="label" hit={item} />
+                    ) : (
+                      <>
+                        {item.label}
+                        <span className="mx-2 badge bg-danger">
+                          {item.count}
+                        </span>
+                      </>
+                    )}
+                  </a>
+                </Link>
               </h3>
             </div>
           ))
@@ -63,7 +69,7 @@ function MarketplaceCategoriesList({
           a.cat-link {
             font-size: 0.9375rem;
             color: #4b566b;
-            fontweight: bold;
+            font-weight: normal;
           }
           a:hover {
             color: #fe696a;
@@ -96,6 +102,6 @@ function MarketplaceCategoriesList({
   );
 }
 
-const MarketplaceCategoryMenu = memo(connectMenu(MarketplaceCategoriesList));
+const CategoriesRefinementList = connectMenu(CategoriesList);
 
-export default MarketplaceCategoryMenu;
+export default CategoriesRefinementList;

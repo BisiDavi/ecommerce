@@ -1,7 +1,7 @@
 import Applayout from "@/layout/Applayout";
 import ProductOverview from "@/components/Products/ProductOverview";
 import fetchAllSwellProducts from "@/lib/processPageproduct";
-import ProductMetatag from "@/components/Products/ProductMetatag";
+import ProductMetatag from "@/components/Metatag/ProductMetatag";
 
 interface ProductPage {
   pageProduct: any;

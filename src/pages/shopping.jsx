@@ -5,7 +5,7 @@ import qs from "qs";
 import isEqual from "react-fast-compare";
 import { Component } from "react";
 
-import ShoppingView from "@/components/ShoppingView";
+import ShoppingView from "@/components/View/ShoppingView";
 import Applayout from "@/layout/Applayout";
 
 const updateAfter = 700;

@@ -5,12 +5,12 @@ header.header {
 }
 
 .uiElement:hover span div {
-  background: white !important;
+  background: white;
 }
 
 .uiElement a {
-  position: absolute !important;
-  left: 10px !important;
+  position: absolute;
+  left: 10px;
 }
 
 .cartDiscount p {
@@ -29,7 +29,7 @@ header.header {
 }
 .cartDiscount button:hover {
   background-color: #fe696a;
-  color: white !important;
+  color: white;
   border-color: #fe696a;
 }
 
@@ -55,7 +55,7 @@ header.header {
   display: flex;
 }
 .productImage img:hover {
-  transform: scale(1.03) !important;
+  transform: scale(1.03);
   transition: transform 300ms ease-in 0s;
 }
 
