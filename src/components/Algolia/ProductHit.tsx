@@ -6,7 +6,7 @@ import LoadProducts from "@/components/Loader/ProductsLoader";
 
 export function ProductHit({ hits }: any) {
   return (
-    <div className="row pt-0 mx-n2">
+    <div className="flex flex-wrap">
       {hits.length > 0 ? (
         hits.map((hit: any, index: number) => (
           <Product key={index} product={hit} />
@@ -22,7 +22,7 @@ export const HitProduct = connectHits(ProductHit);
 
 export function ProductHitList({ hits }: any) {
   return (
-    <div className="row mx-n2">
+    <div className="flex flex-wrap">
       {hits.length > 0 ? (
         hits.map((hit: any, index: number) => (
           <ProductList key={index} product={hit} />

@@ -30,22 +30,22 @@ const createURL = (state: any) => {
     return "";
   }
 
-  const categoryPath = state.menu.product_type
-    ? `${getCategorySlug(state.menu.product_type)}/`
+  const categoryPath = state.menu?.product_type
+    ? `${getCategorySlug(state.menu?.product_type)}/`
     : "";
   const queryParameters: any = {};
 
-  if (state.query) {
+  if (state?.query) {
     queryParameters.query = encodeURIComponent(state.query);
   }
-  if (state.page !== 1) {
+  if (state?.page !== 1) {
     queryParameters.page = state.page;
   }
-  if (state.refinementList.vendor) {
+  if (state?.refinementList?.vendor) {
     queryParameters.vendor =
       state.refinementList.vendor.map(encodeURIComponent);
   }
-  if (state.refinementList.tags) {
+  if (state?.refinementList?.tags) {
     queryParameters.tags = state.refinementList.tags.map(encodeURIComponent);
   }
 

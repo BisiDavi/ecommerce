@@ -19,7 +19,9 @@ function TrendingProductsCatalog() {
 
   return (
     <section className="container md:pt-3 pb-0 md:mb-3">
-      <h2 className="text-center lg:text-3xl sm:text-xl font-bold capitalize">Trending products</h2>
+      <h2 className="text-center lg:text-3xl sm:text-xl font-bold capitalize">
+        Trending products
+      </h2>
       {liveHealthyProductStatus === "error" ? (
         <h1>unable to fetch products, Network issues</h1>
       ) : liveHealthyProductStatus === "loading" ? (
@@ -32,6 +34,7 @@ function TrendingProductsCatalog() {
                 key={product.id}
                 product={product}
                 algoliaEvent="click"
+                homepage
               />
             )
           )}
@@ -43,7 +46,7 @@ function TrendingProductsCatalog() {
             </Link>
           </div>
         </div>
-      )}      
+      )}
     </section>
   );
 }

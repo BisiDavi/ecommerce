@@ -39,7 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         referrerPolicy="no-referrer"
       />
-      <Script type="module" src="/js/theme.js" strategy="afterInteractive" />
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <PersistGate loading={null} persistor={persistor}>

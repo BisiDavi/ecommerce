@@ -45,8 +45,8 @@ export default function RangeSlider({
 
   return (
     <>
-      <div className="widget mb-4 pb-4 border-b-4">
-        <h3 className="widget-title">Price</h3>
+      <div className="widget my-2 pb-4  border-b-2">
+        <h3 className="mb-8 text-xl font-medium">Price</h3>
         <Nouislider
           step={10}
           range={{
@@ -62,22 +62,22 @@ export default function RangeSlider({
           tooltips={true}
         />
         <div className="flex">
-          <div className="flex pb-1">
-            <div className="w-50 pe-2 me-2">
-              <div className="input-group input-group-sm">
-                <span className="input-group-text">$ </span>
+          <div className="flex w-full pb-1 items-center justify-between">
+            <div className="w-1/4">
+              <div className="flex">
+                <span className="mr-2 font-bold">$ </span>
                 <input
-                  className="form-control range-slider-value-min"
+                  className="w-full text-center border-2 border-gray-300 rounded-lg"
                   type="text"
                   value={priceMin}
                 />
               </div>
             </div>
-            <div className="w-50 ps-2">
-              <div className="input-group input-group-sm">
+            <div className="w-1/4">
+              <div className="flex">
                 <span className="input-group-text">$</span>
                 <input
-                  className="form-control range-slider-value-max"
+                  className="w-full text-center border-2 border-gray-300 rounded-lg"
                   type="text"
                   value={priceMax}
                 />

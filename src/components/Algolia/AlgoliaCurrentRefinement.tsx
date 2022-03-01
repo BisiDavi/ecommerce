@@ -6,7 +6,7 @@ const CustomCurrentRefinements = ({ items, refine, createURL }: any) => {
       {items.map((item: any) => (
         <li className="list" key={item.label}>
           {item.items ? (
-            <div>
+            <div className="mx-2">
               {categoryName(item.id)}
               <ul>
                 {item.items.map((nested: any) => (

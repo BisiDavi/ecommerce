@@ -26,6 +26,7 @@ export default function Product({
   product,
   forCategory,
   algoliaEvent,
+  homepage,
 }: ProductProps) {
   const { itemViewed, clickedItemAfterSearch } = useAlgoliaEvents();
   const [inHover, setHover] = useState(false);
@@ -59,9 +60,11 @@ export default function Product({
     }
   }
 
+  const productClass = homepage ? "lg:w-1/4" : "lg:w-1/3";
+
   return (
     <div
-      className={`lg:w-1/4 md:w-1/3 w-1/2 ${styles.product} hover:shadow-lg rounded-lg p-2`}
+      className={`${productClass} md:w-1/3 sm:w-1/2 ${styles.product} hover:shadow-lg rounded-lg p-2`}
     >
       <DynamicProductMetatags product={product} />
       <div className="flex flex-col card product-card p-1 p-md-2">

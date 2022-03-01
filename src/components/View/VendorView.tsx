@@ -62,7 +62,7 @@ export default function VendorView({ category, vendor }: MarketplaceProps) {
           <section className="col-lg-9">
             <ShopBannerToolbar />
             <div>
-              <div className="row mx-n2 mb-5">
+              <div className="flex flex-wrap">
                 <InfiniteProductHits minHitsPerPage={16} animation={true} />
               </div>
               <hr className="mb-2" />

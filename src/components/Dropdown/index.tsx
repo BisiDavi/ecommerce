@@ -2,11 +2,13 @@ import { PropsWithChildren, useState } from "react";
 
 interface Props {
   dropdownText: string | JSX.Element;
+  className?: string;
 }
 
 export default function index({
   dropdownText,
   children,
+  className,
 }: PropsWithChildren<Props>) {
   const [active, setActive] = useState(false);
 
@@ -19,8 +21,7 @@ export default function index({
         <div className="dropdown relative">
           <button
             onClick={onClickHandler}
-            className="
-          px-6
+            className={`${className} px-6
           py-2.5          
           text-white
           font-medium
@@ -28,6 +29,7 @@ export default function index({
           leading-tight
           uppercase
           rounded
+          bg-red-500
           shadow-md
           border-2
           border-red-900
@@ -40,7 +42,7 @@ export default function index({
           flex
           items-center
           whitespace-nowrap
-        "
+        `}
             type="button"
             id="dropdownMenuButton1"
             aria-expanded="false"

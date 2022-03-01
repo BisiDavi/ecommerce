@@ -1,4 +1,5 @@
 import { Highlight, connectRefinementList } from "react-instantsearch-dom";
+import { FiSearch } from "react-icons/fi";
 import LoadCategorySidebar from "@/components/Loader/CategorySidebarLoader";
 
 export function TagsList({
@@ -17,33 +18,33 @@ export function TagsList({
     refine(item.value);
   }
   return (
-    <div className="widget widget-categories mb-4 pb-4 border-b-4">
-      <h3 className="widget-title">Tags</h3>
-      <div className="input-group input-group-sm mb-2">
+    <div className="widget-categories mb-4 pb-4 border-b-2">
+      <h3 className="mb-2 text-xl font-medium">Tags</h3>
+      <div className="relative flex mb-1">
         <input
-          className="widget-filter-search form-control rounded-end"
+          className="border-2 w-full h-10 focus:border-red-500 border-gray-200 rounded-lg px-4 text-sm mb-2"
           type="text"
           onChange={searchItems}
-          placeholder="Search"
+          placeholder="Search..."
         />
-        <i className="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+        <FiSearch size={25} className="text-red-500 absolute right-4 top-2" />
       </div>
       <div className="accordion mt-n1" id="shop-categories">
         {items?.length > 0 ? (
           items.map((item: { label: string; value: string; count: number }) => (
-            <div key={item.label} className="accordion-item">
-              <h3 className="text-sm">
-                <a onClick={(e) => refineSearch(e, item)} className="cat-link">
-                  {isFromSearch ? (
-                    <Highlight attribute="label" hit={item} />
-                  ) : (
-                    <>
-                      {item.label}
-                      <span className="mx-2 badge bg-danger">{item.count}</span>
-                    </>
-                  )}
-                </a>
-              </h3>
+            <div key={item.label} className="accordion-item my-4">
+              <a onClick={(e) => refineSearch(e, item)}>
+                {isFromSearch ? (
+                  <Highlight attribute="label" hit={item} />
+                ) : (
+                  <>
+                    {item.label}
+                    <span className="ml-4 bg-red-500 rounded-full px-3 py-1 h-4 hover:bg-red-700 text-sm text-white">
+                      {item.count}
+                    </span>
+                  </>
+                )}
+              </a>
             </div>
           ))
         ) : (

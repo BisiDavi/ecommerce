@@ -32,7 +32,7 @@ export type productType = {
   hkd_compare_at_price: number;
   category: string;
   oldPrice?: number;
-  rrp?:any;
+  rrp?: any;
   origPrice?: number;
   slug: string;
   review_rating?: number;
@@ -373,6 +373,7 @@ export interface ProductProps {
   product: productType;
   forCategory?: boolean;
   algoliaEvent?: "search" | "click" | "filter";
+  homepage?: boolean;
 }
 
 export type typeModal =

@@ -51,18 +51,16 @@ export default function CollectionMarketplace({
         </div>
       </div>
       <div className="container pb-5 mb-2 mb-md-4">
-        <div className="row">
-          <Categories categoryMarketplace />
-          <section className="col-lg-9">
-            <ShopBannerToolbar />
-            <div>
-              <div className="row mx-n2 mb-5">
-                <InfiniteProductHits minHitsPerPage={30} animation={true} />
-              </div>
-              <hr className="mb-2" />
+        <Categories categoryMarketplace />
+        <section className="w-2/3">
+          <ShopBannerToolbar />
+          <div>
+            <div className="flex flex-wrap">
+              <InfiniteProductHits minHitsPerPage={30} animation={true} />
             </div>
-          </section>
-        </div>
+            <hr className="mb-2" />
+          </div>
+        </section>
       </div>
     </AlgoliaView>
   );

@@ -1,7 +1,8 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import { updateProductView } from "@/redux/shop-slice";
 import AlgoliaSortby from "@/components/Algolia/AlgoliaSortby";
-
+import { IoGridOutline } from "react-icons/io5";
+import { AiOutlineBars } from "react-icons/ai";
 export default function ShopBannerToolbar() {
   const dispatch = useAppDispatch();
   const { productView } = useAppSelector((state) => state.shop);
@@ -13,7 +14,7 @@ export default function ShopBannerToolbar() {
     dispatch(updateProductView(viewType));
   }
   return (
-    <div className="ShopBannerToolbar flex justify-center justify-content-sm-between items-center pt-2 pb-4 pb-sm-5">
+    <div className="ShopBannerToolbar items-center w-1/2 flex justify-center justify-between items-center pt-2 pb-4">
       <AlgoliaSortby
         defaultRefinement="New_Livehealthy_products_index"
         items={[
@@ -22,18 +23,18 @@ export default function ShopBannerToolbar() {
           { value: "New_Livehealthy_products_index_z-a", label: "Name Z-A" },
         ]}
       />
-      <div className="d d-sm-flex pb-3">
+      <div className="flex pb-3">
         <span
-          className={`btn btn-icon nav-link-style ${gridStyle} me-2 cursor-pointer`}
+          className={`rounded-lg mx-2 bg-white p-2 hover:bg-red-500 hover:text-white ${gridStyle} me-2 cursor-pointer`}
           onClick={() => updateView("grid")}
         >
-          <i className="ci-view-grid"></i>
+          <IoGridOutline />
         </span>
         <span
           onClick={() => updateView("list")}
-          className={`btn btn-icon nav-link-style ${listStyle} cursor-pointer`}
+          className={`rounded-lg mx-2 bg-white hover:bg-red-500 hover:text-white p-2 ${listStyle} cursor-pointer`}
         >
-          <i className="ci-view-list"></i>
+          <AiOutlineBars />
         </span>
       </div>
     </div>

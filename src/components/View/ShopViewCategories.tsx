@@ -7,12 +7,12 @@ import MarketplaceCategoryMenu from "@/components/Algolia/MarketplaceCategoryMen
 
 export default function ShopViewCategories() {
   return (
-    <aside className="col-lg-3">
+    <aside className="w-1/4 -mt-20">
       <div
-        className="categoryCanvas offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1"
+        className="bg-white w-100 rounded-t-lg shadow-lg p-10"
         id="shop-sidebar"
       >
-        <div className="offcanvas-header items-center shadow-sm">
+        <div className="sm:hidden offcanvas-header items-center shadow-sm">
           <h2 className="h5 mb-0">Filters</h2>
           <button
             className="btn-close ms-auto"
@@ -34,22 +34,6 @@ export default function ShopViewCategories() {
             searchable={true}
             attribute="vendor"
           />
-          {/* 
-          <AttributeRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="vendor"
-            title="Vendor"
-          />
-           <AttributeRefinementList
-             showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
-            title="Tags"
-          />
-           */}
           <TagsRefinementList
             showMoreLimit={100}
             showMore={true}

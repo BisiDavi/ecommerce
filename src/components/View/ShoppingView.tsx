@@ -64,20 +64,18 @@ export default function ShoppingView(
         </div>
       </div>
       <div className="container pb-5 mb-2 mb-md-4">
-        <div className="row">
-          <ShopViewCategories />
-          <section className="col-lg-9">
-            {typeof window !== "undefined" && <ShopBannerToolbar />}
-            <div>
-              <div className="row mx-n2 mb-5">
-                {typeof window !== "undefined" && (
-                  <InfiniteProductHits minHitsPerPage={9} animation={true} />
-                )}
-              </div>
-              <hr className="mb-2" />
+        <ShopViewCategories />
+        <section className="w-2/3">
+          {typeof window !== "undefined" && <ShopBannerToolbar />}
+          <div>
+            <div className="flex flex-wrap">
+              {typeof window !== "undefined" && (
+                <InfiniteProductHits minHitsPerPage={9} animation={true} />
+              )}
             </div>
-          </section>
-        </div>
+            <hr className="mb-2" />
+          </div>
+        </section>
       </div>
     </InstantSearch>
   );

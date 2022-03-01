@@ -37,36 +37,33 @@ export default function ShopView({
         distinct
         enablePersonalization={true}
       />
-      <div className="page-title-overlap bg-dark pt-4">
-        <div className="container d-lg-flex justify-between py-2 py-lg-3">
-          <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
-            <nav aria-label="breadcrumb">
-              <AlgoliaCurrentRefinement />
-              <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-center justify-content-lg-start">
-                <li className="breadcrumb-item">
-                  <Link href="/" passHref>
-                    <a className="text-nowrap">Home</a>
-                  </Link>
-                </li>
-                <li className="breadcrumb-item text-nowrap active">Shop</li>
-              </ol>
-            </nav>
-          </div>
+      <div className="w-full flex bg-gray-700 justify-between py-14">
+        <div className="container m-auto mb-3 mb-lg-0 pt-lg-2 flex items-center justify-between">
+          <nav aria-label="w-1/2 items-center breadcrumb flex bg-gray-700 ">
+            <ol className="breadcrumb text-white flex flex-nowrap justify-center">
+              <li className="breadcrumb-item hover:text-red-500">
+                <Link href="/" passHref>
+                  <a className="text-nowrap">Home</a>
+                </Link>
+              </li>
+              <li className="breadcrumb-item mx-2">
+                <span> &gt; </span>
+              </li>
+              <li className="breadcrumb-item text-nowrap active">Shop</li>
+            </ol>
+            <AlgoliaCurrentRefinement />
+          </nav>
+          <ShopBannerToolbar />
         </div>
       </div>
-      <div className="container pb-5 mb-2 mb-md-4">
-        <div className="row">
-          <ShopViewCategories />
-          <section className="col-lg-9">
-            <ShopBannerToolbar />
-            <div>
-              <div className="row mx-n2 mb-5">
-                <InfiniteProductHits minHitsPerPage={9} animation={true} />
-              </div>
-              <hr className="mb-2" />
-            </div>
-          </section>
-        </div>
+      <div className="container flex pb-5 mb-2 mb-md-4">
+        <ShopViewCategories />
+        <section className="w-3/4 flex flex-col">
+          <div className="flex flex-wrap">
+            <InfiniteProductHits minHitsPerPage={9} animation={true} />
+          </div>
+          <hr className="mb-2" />
+        </section>
       </div>
     </InstantSearch>
   );
