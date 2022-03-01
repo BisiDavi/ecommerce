@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { GiShoppingCart } from "react-icons/gi";
 
 import { productType } from "@/types";
 import useAlgoliaEvents from "@/hooks/useAlgoliaEvents";
@@ -76,10 +77,10 @@ export default function ProductListForm({ product }: ProductProps) {
               </select>
               <button
                 aria-label="Add to Cart"
-                className="btn btn-primary btn-sm"
+                className="bg-red-500 rounded-lg text-white p-4"
                 type="submit"
               >
-                <i className="ci-cart fs-sm me-1"></i>
+                <GiShoppingCart />
                 Add to Cart
               </button>
             </div>
@@ -87,7 +88,7 @@ export default function ProductListForm({ product }: ProductProps) {
         })
       ) : (
         <button
-          className="btn btn-primary btn-sm m-auto flex items-center"
+          className="bg-red-500 text-white p-2 font-normal border-0 rounded-md hover:bg-red-400 items-center"
           type="submit"
           aria-label="Add to Cart"
         >

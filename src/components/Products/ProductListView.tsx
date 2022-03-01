@@ -20,23 +20,27 @@ export default function ProductListView({ product }: any) {
   return (
     <>
       <div className="card-body py-2">
-        <a className="product-meta d-block fs-xs pb-1">{product.vendor}</a>
-        <h3 className="product-title fs-base">
+        <a className="text-2xl font-medium mb-1">{product.vendor}</a>
+        <h3 className="text-xl font-normal">
           <Link href={`/products/${product.slug}`} passHref>
             <a onClick={productViewedHandler}>{product.name}</a>
           </Link>
         </h3>
         <div className="flex justify-between">
-          <div className="product-price flex align-items-baseline">
-            <span className="text-accent">
-              <FormattedPrice price={product.price} isProduct />
-            </span>
+          <div className="flex flex-col items">
+            <FormattedPrice
+              price={product.price}
+              className="text-md font-bold"
+              isProduct
+            />
             {product.rrp && (
-              <span className="small text-accent mx-2">
-                <del className="fs-sm text-muted">
-                  <FormattedPrice price={product.rrp} isProduct />
-                </del>
-              </span>
+              <del>
+                <FormattedPrice
+                  price={product.rrp}
+                  className="text-sm"
+                  isProduct
+                />
+              </del>
             )}
           </div>
           <RatingStar rate={product.rating} />

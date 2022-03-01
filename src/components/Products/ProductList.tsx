@@ -21,8 +21,10 @@ export default function ProductList({ product }: ProductProps) {
   }
 
   return (
-    <div className="card product-card  product-list mb-3 border-b-4 justify-center">
-      <span className="badge bg-danger badge-shadow">Sale</span>
+    <div className="product-list w-full mb-4 px-4 py-2 hover:shadow-lg border-b-2 justify-center">
+      <span className="bg-red-500 shadow-lg text-white p-2 mx-1 rounded-lg">
+        Sale
+      </span>
       <button
         className="btn-wishlist btn-sm"
         type="button"
@@ -33,7 +35,7 @@ export default function ProductList({ product }: ProductProps) {
       >
         <i className="ci-heart"></i>
       </button>
-      <div className="d-sm-flex items-center">
+      <div className="flex items-center">
         <Link href={`/products/${product.slug}`} passHref>
           <a onClick={productViewedHandler} className="product-list-thumb">
             <Image

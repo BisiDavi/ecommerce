@@ -36,10 +36,12 @@ function InfiniteHits({ hits, hasMore, refineNext }: Props) {
     };
   }, [hasMore, refineNext, sentinelRef]);
 
+  const viewStyle = productView !== "grid" ? "w-full" : "";
+
   return (
     <>
       {filterHits.length > 0 ? (
-        <div className="ais-InfiniteHits">
+        <div className={`ais-InfiniteHits ${viewStyle}`}>
           <ul className="ais-InfiniteHits-list">
             {productView === "grid" ? (
               <ProductHit hits={filterHits} />

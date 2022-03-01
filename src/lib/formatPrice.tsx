@@ -40,7 +40,7 @@ function FormatCurrency({
   const productItemPrice = isProduct ? priceRate : price;
   const itemPrice = formatPrice(productItemPrice);
   return (
-    <div className={`flex items-center text-xs ${className}`}>
+    <div className={`flex items-center ${className}`}>
       {currencySymbolFormatter(selectedCurrency[0])}
       {itemPrice}
     </div>
