@@ -32,6 +32,7 @@ export type productType = {
   hkd_compare_at_price: number;
   category: string;
   oldPrice?: number;
+  rrp?:any;
   origPrice?: number;
   slug: string;
   review_rating?: number;

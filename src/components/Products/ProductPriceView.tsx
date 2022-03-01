@@ -1,5 +1,5 @@
 import FormattedPrice from "@/lib/formatPrice";
-import RatingStar from "@/components/RatingStar";
+import RatingStar from "@/components/Rating/RatingStar";
 import styles from "@/styles/ui.module.css";
 
 export default function ProductPriceView({ product }: any) {

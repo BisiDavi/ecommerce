@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RatingStar from "@/components/RatingStar";
+import RatingStar from "@/components/Rating/RatingStar";
 import styles from "@/styles/ui.module.css";
 import Image from "@/components/Image";
 

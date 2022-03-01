@@ -8,7 +8,7 @@ import ShopByBrand from "@/components/Slider/ShopByBrandSlider";
 
 export default function Home() {
   return (
-    <Applayout>
+    <Applayout title="Live healthy Store - Quality Australian Products - Free Shipping to HK">
       <HomepageSlider />
       <PopularCategories />
       <TrendingProducts />
