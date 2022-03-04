@@ -1,17 +1,11 @@
 import { CustomRangeSlider } from "@/components/Algolia/AlgoliaPriceRange";
-import  CategoriesRefinementList  from "@/components/Algolia/CategoriesRefinementList";
 import { RatingsList } from "@/components/Algolia/RatingsRefinementList";
-import MarketplaceCategoryMenu from "@/components/Algolia/MarketplaceCategoryMenu";
-import { SingleVendorRefinementList } from "@/components/Algolia/SingleVendorRefinementList";
-import { TagsRefinementList } from "@/components/Algolia/TagsRefinementList";
+import CustomRefinementList from "@/components/Algolia/CustomRefinementList";
+import CustomMenu from "@/components/Algolia/CustomMenu";
 
-interface CategoriesProps {
-  categoryMarketplace?: boolean;
-}
-
-export default function Categories({ categoryMarketplace }: CategoriesProps) {
+export default function Categories() {
   return (
-    <aside className="col-lg-3">
+    <aside className="w-1/3">
       <div
         className="categoryCanvas offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1"
         id="shop-sidebar"
@@ -26,38 +20,9 @@ export default function Categories({ categoryMarketplace }: CategoriesProps) {
           ></button>
         </div>
         <div className="offcanvas-body py-grid-gutter px-lg-grid-gutter">
-          {categoryMarketplace ? (
-            <MarketplaceCategoryMenu
-              searchable={true}
-              attribute="product_type"
-            />
-          ) : (
-            <CategoriesRefinementList
-              showMoreLimit={100}
-              showMore={true}
-              searchable={true}
-              attribute="product_type"
-            />
-          )}
-          <SingleVendorRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="vendor"
-          />
-          {/* <AttributeRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
-            title="Tags"
-          /> */}
-          <TagsRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
-          />
+          <CustomMenu attribute="product_type" title="Product Type" />
+          <CustomRefinementList attribute="vendor" title="Vendors" />
+          <CustomRefinementList attribute="tags" title="Tags" />
           <CustomRangeSlider attribute="price" />
           <RatingsList attribute="rating" />
         </div>

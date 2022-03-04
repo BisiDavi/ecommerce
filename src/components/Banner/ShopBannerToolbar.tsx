@@ -14,7 +14,7 @@ export default function ShopBannerToolbar() {
     dispatch(updateProductView(viewType));
   }
   return (
-    <div className="ShopBannerToolbar items-center w-1/2 flex justify-center justify-between items-center pt-2 pb-4">
+    <div className="ShopBannerToolbar w-3/4 flex justify-between pt-2 pb-4 place-self-end absolute bottom-0 pl-12">
       <AlgoliaSortby
         defaultRefinement="New_Livehealthy_products_index"
         items={[

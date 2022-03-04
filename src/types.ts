@@ -374,6 +374,7 @@ export interface ProductProps {
   forCategory?: boolean;
   algoliaEvent?: "search" | "click" | "filter";
   homepage?: boolean;
+  slider?:boolean
 }
 
 export type typeModal =

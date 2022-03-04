@@ -1,16 +1,16 @@
 import { CustomRangeSlider } from "@/components/Algolia/AlgoliaPriceRange";
 import AttributeRefinementList from "@/components/Algolia/AttributeRefinementList";
 import { RatingsList } from "@/components/Algolia/RatingsRefinementList";
-import { SingleVendorRefinementList } from "@/components/Algolia/SingleVendorRefinementList";
-import { TagsRefinementList } from "@/components/Algolia/TagsRefinementList";
+import CustomRefinementList from "@/components/Algolia/CustomRefinementList";
+import CustomMenu from "@/components/Algolia/CustomMenu";
 
 interface props {
-  vendorView: boolean;
+  vendor: string;
 }
 
-export default function VendorCategory({ vendorView }: props) {
+export default function VendorCategory({ vendor }: props) {
   return (
-    <aside className="col-lg-3">
+    <aside className="w-1/3">
       <div
         className="vendorCategoryCanvas offcanvas offcanvas-collapse bg-white w-100 rounded-3 shadow-lg py-1"
         id="shop-sidebar"
@@ -25,35 +25,13 @@ export default function VendorCategory({ vendorView }: props) {
           ></button>
         </div>
         <div className="offcanvas-body py-grid-gutter px-lg-grid-gutter">
-          {vendorView ? (
-            <SingleVendorRefinementList
-              showMoreLimit={100}
-              showMore={true}
-              searchable={true}
-              attribute="vendor"
-            />
-          ) : (
-            <AttributeRefinementList
-              showMoreLimit={100}
-              showMore={true}
-              searchable={true}
-              attribute="vendor"
-              title="Vendor"
-            />
-          )}
-          <TagsRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
+          <CustomRefinementList
+            attribute="vendor"
+            title="Vendor"
+            defaultRefinement={[vendor]}
           />
-          {/* <AttributeRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
-            title="Tags"
-          /> */}
+          <CustomRefinementList attribute="tags" title="Tags" />
+
           <CustomRangeSlider attribute="price" />
           <RatingsList attribute="rating" />
         </div>

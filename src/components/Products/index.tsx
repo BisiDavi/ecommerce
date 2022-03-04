@@ -27,6 +27,7 @@ export default function Product({
   forCategory,
   algoliaEvent,
   homepage,
+  slider,
 }: ProductProps) {
   const { itemViewed, clickedItemAfterSearch } = useAlgoliaEvents();
   const [inHover, setHover] = useState(false);
@@ -60,7 +61,11 @@ export default function Product({
     }
   }
 
-  const productClass = homepage ? "lg:w-1/4" : "lg:w-1/3";
+  const productClass = homepage
+    ? "lg:w-1/4"
+    : slider
+    ? "w-full"
+    : "lg:w-1/3 md:w-1/4 w-1/2";
 
   return (
     <div

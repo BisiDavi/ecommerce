@@ -58,7 +58,7 @@ export default function VendorView({ category, vendor }: MarketplaceProps) {
       </div>
       <div className="container pb-5 mb-2 mb-md-4">
         <div className="row">
-          <VendorCategories vendorView />
+          <VendorCategories vendor={vendor} />
           <section className="col-lg-9">
             <ShopBannerToolbar />
             <div>

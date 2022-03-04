@@ -1,10 +1,10 @@
 import { Configure } from "react-instantsearch-dom";
 import Link from "next/link";
 
-import Categories from "@/components/Category/Categories";
+import AlgoliaCurrentRefinement from "@/components/Algolia/AlgoliaCurrentRefinement";
+import ShopViewCategories from "@/components/View/ShopViewCategories";
 import ShopBannerToolbar from "@/components/Banner/ShopBannerToolbar";
 import InfiniteProductHits from "@/components/Algolia/InfiniteHits";
-import CollectionCurrentRefinements from "@/components/Algolia/CollectionCurrentRefinement";
 import { AlgoliaView } from "@/components/Algolia/AlgoliaInstantSearch";
 
 interface MarketplaceProps {
@@ -25,41 +25,38 @@ export default function CollectionMarketplace({
         distinct
         enablePersonalization={true}
       />
-      <div className="page-title-overlap bg-dark pt-4">
-        <div className="container d-lg-flex justify-between py-2 py-lg-3">
-          <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
-            <nav aria-label="breadcrumb">
-              <CollectionCurrentRefinements />
-              <ol className="breadcrumb breadcrumb-light flex-lg-nowrap justify-center justify-content-lg-start">
-                <li className="breadcrumb-item">
-                  <Link href="/" passHref>
-                    <a className="text-nowrap">Home</a>
-                  </Link>
+      <div className="w-full flex bg-gray-700 justify-between h-52">
+        <div className="container m-auto mb-3 mb-lg-0 pt-lg-2 flex flex-col h-32 relative">
+          <nav className="w-full items-start  justify-start flex bg-gray-700 ">
+            <ol className="text-white lg:flex justify-center lg:justify-start">
+              <li className="mb-0">
+                <Link href="/" passHref>
+                  <a className="hover:text-red-500">Home</a>
+                </Link>
+              </li>
+              <li className="mx-2">
+                <span> &gt; </span>
+              </li>
+              {collection ? (
+                <li className="mb-0 text-red-500">{collection?.name}</li>
+              ) : (
+                <li className="mb-0 text-red-500">
+                  <a>Shop</a>
                 </li>
-                {collection ? (
-                  <li className="breadcrumb-item text-nowrap active">
-                    {collection?.name}
-                  </li>
-                ) : (
-                  <li className="breadcrumb-item text-nowrap active">
-                    <a>Shop</a>
-                  </li>
-                )}
-              </ol>
-            </nav>
-          </div>
+              )}
+            </ol>
+            <AlgoliaCurrentRefinement />
+          </nav>
+          <ShopBannerToolbar />
         </div>
       </div>
-      <div className="container pb-5 mb-2 mb-md-4">
-        <Categories categoryMarketplace />
-        <section className="w-2/3">
-          <ShopBannerToolbar />
-          <div>
-            <div className="flex flex-wrap">
-              <InfiniteProductHits minHitsPerPage={30} animation={true} />
-            </div>
-            <hr className="mb-2" />
+      <div className="container flex pb-5 mb-2 mb-md-4">
+        <ShopViewCategories />
+        <section className="w-3/4 flex flex-col">
+          <div className="flex flex-wrap">
+            <InfiniteProductHits minHitsPerPage={9} animation={true} />
           </div>
+          <hr className="mb-2" />
         </section>
       </div>
     </AlgoliaView>

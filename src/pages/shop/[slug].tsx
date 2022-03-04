@@ -8,7 +8,7 @@ import CategoryMetatag from "@/components/Metatag/CategoryMetatag";
 interface collectionProps {
   collection: categoryType;
 }
-export default function Category({ collection }: collectionProps): JSX.Element {
+export default function ShopCategory({ collection }: collectionProps): JSX.Element {
   return (
     <Applayout
       title={`${collection.name} | Free Delivery to HK | Live healthy Online Store`}
@@ -39,8 +39,7 @@ export async function getStaticPaths() {
   return {
     paths:
       storeCategories?.map(
-        (collection: { slug: any }) =>
-          `/collections/product-type/${collection.slug}`
+        (collection: { slug: any }) => `/collections/${collection.slug}`
       ) || [],
     fallback: false,
   };

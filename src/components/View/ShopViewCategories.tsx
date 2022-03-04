@@ -1,13 +1,11 @@
 import { CustomRangeSlider } from "@/components/Algolia/AlgoliaPriceRange";
-import AttributeRefinementList from "@/components/Algolia/AttributeRefinementList";
-import { TagsRefinementList } from "@/components/Algolia/TagsRefinementList";
-import { SingleVendorRefinementList } from "@/components/Algolia/SingleVendorRefinementList";
 import { RatingsList } from "@/components/Algolia/RatingsRefinementList";
-import MarketplaceCategoryMenu from "@/components/Algolia/MarketplaceCategoryMenu";
+import CustomRefinementList from "@/components/Algolia/CustomRefinementList";
+import CustomMenu from "@/components/Algolia/CustomMenu";
 
 export default function ShopViewCategories() {
   return (
-    <aside className="w-1/4 -mt-20">
+    <aside className="w-1/4 -mt-24">
       <div
         className="bg-white w-100 rounded-t-lg shadow-lg p-10"
         id="shop-sidebar"
@@ -22,35 +20,13 @@ export default function ShopViewCategories() {
           ></button>
         </div>
         <div className="offcanvas-body py-grid-gutter px-lg-grid-gutter">
-          <MarketplaceCategoryMenu
-            searchable={true}
-            attribute="product_type"
-            showMoreLimit={100}
-            showMore={true}
-          />
-          <SingleVendorRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="vendor"
-          />
-          <TagsRefinementList
-            showMoreLimit={100}
-            showMore={true}
-            searchable={true}
-            attribute="tags"
-          />
+          <CustomMenu attribute="product_type" title="Product Type" />
+          <CustomRefinementList attribute="vendor" title="Vendors" />
+          <CustomRefinementList attribute="tags" title="Tags" />
           <CustomRangeSlider attribute="price" />
           <RatingsList attribute="rating" />
         </div>
       </div>
-      <style jsx>
-        {`
-          .categoryCanvas {
-            max-width: 22rem;
-          }
-        `}
-      </style>
     </aside>
   );
 }

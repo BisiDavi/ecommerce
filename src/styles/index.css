@@ -39,10 +39,14 @@ ul.splide__pagination {
 .cz-range-slider-ui .noUi-connect {
   background-color: #fe696a;
 }
+.noUi-horizontal .noUi-handle {
+  width: 28px;
+  height: 28px;
+  right: -17px;
+  top: -6px;
+}
 .cz-range-slider-ui .noUi-handle {
   top: 50%;
-  width: 1.375rem;
-  height: 1.375rem;
   margin-top: -0.6875rem;
   border: 0;
   border-radius: 50%;
@@ -81,4 +85,123 @@ ul.splide__pagination {
 }
 html:not([dir="rtl"]) .cz-range-slider-ui.noUi-horizontal .noUi-handle {
   right: -0.6875rem;
+}
+
+/* refinement list style */
+ul.ais-Menu-list,
+ul.ais-RefinementList-list {
+  list-style: none;
+  padding: 0px;
+}
+
+ul.ais-Menu-list .ais-Menu-count,
+ul.ais-RefinementList-list .ais-RefinementList-count {
+  background-color: red;
+  padding: 2px;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.ais-RefinementList-checkbox {
+  margin: 0px 5px 0px 0px;
+}
+
+.ais-RefinementList-labelText {
+  font-size: 14px;
+}
+
+.tags ul {
+  max-height: 270px;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+
+.vendor ul {
+  max-height: 250px;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+
+button.ais-RefinementList-showMore:hover {
+  background-color: white;
+  border: 1px solid red;
+  color: red;
+}
+
+button.ais-RefinementList-showMore {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  margin: 15px 30px 15px 0px;
+  font-size: 15px;
+  padding: 8px;
+}
+
+input.ais-SearchBox-input {
+  padding: 0.425rem 0.75rem;
+  font-size: 0.8125rem;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4b566b;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #dae1e7;
+  width: 100%;
+}
+
+input.ais-SearchBox-input:focus-visible {
+  outline: 1px solid red;
+}
+
+form.ais-SearchBox-form {
+  display: flex;
+}
+
+form.ais-SearchBox-form button svg {
+  height: 15px;
+  width: 15px;
+}
+
+form.ais-SearchBox-form button.ais-SearchBox-rest {
+  margin-left: -5px;
+}
+
+form.ais-SearchBox-form button.ais-SearchBox-submit {
+  margin-left: -40px;
+}
+
+.ais-RefinementList-searchBox,
+.ais-Menu-searchBox {
+  margin-bottom: 10px;
+}
+
+span.ais-Menu-label {
+  font-weight: normal;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+/* product description */
+.container.productDescription h6 {
+  margin-bottom: 0px !important;
+}
+
+.container.productDescription h2 {
+  margin-bottom: 0px !important;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.productInfo p {
+  margin-bottom: 6px;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .related-products ul#splide02-list {
+    min-height: 480px;
+  }
 }
