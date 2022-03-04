@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
+import {
+  BsCartPlusFill,
+  BsFacebook,
+  BsInstagram,
+  BsTwitter,
+} from "react-icons/bs";
 
 import useShoppingCart from "@/hooks/useShoppingCart";
 import { productType } from "@/types";
@@ -153,12 +159,12 @@ export function ProductQuantityCounter({
           aria-label="Remove"
           onClick={() => updateCounter("decrement")}
           type="button"
-          className="p-2 flex items-center justify-center btn btn-danger text-white"
+          className="h-8 text-xl font-bold flex items-center justify-center bg-red-500 hover:bg-red-400 text-white w-10 rounded-md"
         >
           -
         </button>
         <input
-          className="w-25 mx-2 text-center border"
+          className="w-1/5 mx-2 text-center border focus-within:ring-1 focus-within:ring-red-500"
           readOnly
           value={itemQty}
         />
@@ -166,31 +172,20 @@ export function ProductQuantityCounter({
           aria-label="Add"
           onClick={() => updateCounter("increment")}
           type="button"
-          className={`p-2 flex items-center justify-center btn btn-success text-white`}
+          className="h-8 text-xl font-bold flex items-center justify-center bg-green-500 text-white w-10 hover:bg-green-400 rounded-md"
         >
           +
         </button>
       </div>
       <button
         aria-label="Add to Cart"
-        className="addToCartBtn btn btn-primary btn-shadow d-block w-50"
+        className="flex bg-red-500 items-center rounded-md text-white p-2 text-sm hover:bg-red-400"
         type="button"
         onClick={addToCart}
       >
-        <i className="ci-cart fs-lg me-2"></i>
+        <BsCartPlusFill className="mx-1" />
         Add to Cart
       </button>
-      <style jsx>
-        {`
-          .addToCartBtn {
-            height: 43px;
-          }
-          .cartCounter button {
-            font-size: 30px;
-            height: 30px;
-          }
-        `}
-      </style>
     </div>
   );
 }
@@ -198,19 +193,16 @@ export function ProductQuantityCounter({
 export function ShareProductLink() {
   return (
     <div className="flex items-center">
-      <label className="form-label d-inline-block align-middle my-2 me-3">
-        Share:
-      </label>
-      <a className="btn-share btn-twitter me-2 my-2" href="#">
-        <i className="ci-twitter"></i>
-        Twitter
+      <label className="mr-2">Share:</label>
+      <a className="flex items-center hover:text-blue-500" href="#">
+        <BsTwitter className="mx-1" /> Twitter
       </a>
-      <a className="btn-share btn-instagram me-2 my-2" href="#">
-        <i className="ci-instagram"></i>
+      <a className="flex items-center mx-2 hover:text-blue-500" href="#">
+        <BsInstagram className="mx-1" />
         Instagram
       </a>
-      <a className="btn-share btn-facebook my-2" href="#">
-        <i className="ci-facebook"></i>
+      <a className="flex items-center hover:text-blue-500" href="#">
+        <BsFacebook className="mx-1" />
         Facebook
       </a>
     </div>

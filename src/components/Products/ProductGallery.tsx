@@ -1,20 +1,15 @@
 import Head from "next/head";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 
 import ProductGalleryView from "@/components/Products/ProductGalleryView";
 import { productType } from "@/types";
-
-const PaymentNote = dynamic((): any =>
-  import("@/components/Products/ProductView").then((mod) => mod.PaymentNote)
-);
 
 interface Props {
   product: productType;
   quickView?: boolean;
 }
 
-export default function ProductGallery({ product, quickView }: Props) {
+export default function ProductGallery({ product }: Props) {
   return (
     <>
       <Head>
@@ -29,7 +24,6 @@ export default function ProductGallery({ product, quickView }: Props) {
       />
       <div className="w-2/3 lg:pr-0 lg:pt-4">
         <ProductGalleryView product={product} />
-        {!quickView && <PaymentNote />}
       </div>
     </>
   );

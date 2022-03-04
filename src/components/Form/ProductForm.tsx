@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import { useState, useCallback } from "react";
+import { BsCartPlusFill } from "react-icons/bs";
 
 import { productType, productOptions } from "@/types";
 import { ProductQuantityCounter } from "@/components/Products/ProductView";
@@ -116,20 +117,13 @@ export default function ProductForm({ product }: ProductFormType) {
             )}
             <button
               aria-label="Add to cart"
-              className="submitBtn btn btn-primary btn-shadow d-block w-50"
+              className="bg-red-500 rounded-lg text-white"
               type="submit"
             >
-              <i className="ci-cart fs-lg me-2"></i>
+              <BsCartPlusFill />
               Add to Cart
             </button>
           </div>
-          <style jsx>
-            {`
-              .submitBtn {
-                height: 43px;
-              }
-            `}
-          </style>
         </form>
       ) : (
         <ProductQuantityCounter product={product} />

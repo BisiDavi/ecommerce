@@ -44,10 +44,8 @@ export default function QuickViewModal({ product }: QuickViewModalProps) {
       modalHandler={quickViewHandler}
       header={<ModalHeader productToView={productToView} />}
     >
-      <div className="row">
-        <ProductGallery product={productToView} quickView />
-        <ProductdetailsView product={product} />
-      </div>
+      <ProductGallery product={productToView} />
+      <ProductdetailsView product={product} />
       <style jsx>
         {`
           .description {
