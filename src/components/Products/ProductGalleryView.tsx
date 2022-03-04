@@ -38,8 +38,8 @@ export default function ProductGalleryView({ product }: Props) {
   };
 
   return (
-    <div className="product-gallery">
-      <div className="product-gallery-preview order-sm-2">
+    <div className="product-gallery w-full flex">
+      <div className="product-gallery-preview order-2 w-3/4">
         <div
           onClick={onImgClick}
           className="product-gallery-preview-item active"
@@ -74,7 +74,7 @@ export default function ProductGalleryView({ product }: Props) {
           />
         )}
       </div>
-      <div className="product-gallery-thumblist order-sm-1">
+      <div className="product-gallery-thumblist order-1 w-1/4">
         {images?.map((image: any, index) => (
           <a
             className={`product-gallery-thumblist-item ${activethumbnailImg(

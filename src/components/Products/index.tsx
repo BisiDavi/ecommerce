@@ -78,7 +78,7 @@ export default function Product({
       <DynamicProductMetatags product={product} />
       <div className="flex flex-col card product-card p-1 p-md-2">
         <div className="flex items-center justify-between">
-          {product.hkd_compare_at_price > 0 && (
+          {product.rrp && (
             <div className="discount-price mt-2">
               {discountPrice(product)} %
             </div>
@@ -114,9 +114,9 @@ export default function Product({
             href={`/shop/vendors/${replaceSpaceWithHypen(product.vendor)}`}
             passHref
           >
-            <a className="text-xs hover:text-red-500">{product.vendor}</a>
+            <a className="text-sm hover:text-red-500">{product.vendor}</a>
           </Link>
-          <h3 className="sm:text-sm md:text-md product-title sm:w-32  md:w-56 lg:w-72 text-sm">
+          <h3 className="sm:text-sm product-title sm:w-32  md:w-56 lg:w-72 text-md">
             <Link href={`/products/${product.slug}`} passHref>
               <a
                 className="hover:text-red-500 product-link"

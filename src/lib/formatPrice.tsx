@@ -1,4 +1,5 @@
 import { currencySymbolFormatter, useCurrencies } from "@/hooks/useCurrency";
+import { LineLoader } from "@/components/Loader/ProductsLoader";
 import { useAppSelector } from "@/hooks/useRedux";
 
 export function formatPrice(price: number) {
@@ -7,8 +8,7 @@ export function formatPrice(price: number) {
 }
 
 interface formattedPriceProps {
-  price: number;
-  oldPrice?: boolean;
+  price: string | number;
   isProduct?: boolean;
   className?: string;
 }
@@ -16,12 +16,10 @@ interface formattedPriceProps {
 interface formatCurrencyProps extends formattedPriceProps {
   currencies: any[];
   currency: any;
-  className: string;
 }
 
 function FormatCurrency({
   price,
-  oldPrice,
   isProduct,
   currencies,
   currency,
@@ -30,49 +28,42 @@ function FormatCurrency({
   const selectedCurrency = currencies?.filter(
     (currencyP: { code: string }) => currencyP.code === currency
   );
+  const nPrice = Number(price);
+  const priceRate = nPrice * selectedCurrency[0].rate;
 
-  const currencyRate = currencies[1].rate;
-
-  const priceRate = oldPrice
-    ? (price / currencyRate) * selectedCurrency[0].rate
-    : price * selectedCurrency[0].rate;
-
-  const productItemPrice = isProduct ? priceRate : price;
+  const productItemPrice = isProduct ? priceRate : nPrice;
   const itemPrice = formatPrice(productItemPrice);
   return (
-    <div className={`flex items-center ${className}`}>
+    <span className={`${className} text-blue-600`}>
       {currencySymbolFormatter(selectedCurrency[0])}
       {itemPrice}
-    </div>
+    </span>
   );
 }
 
 export default function FormattedPrice({
   price,
-  oldPrice,
   isProduct,
   className,
 }: formattedPriceProps): JSX.Element {
-  const [currencies, status] = useCurrencies();
+  const { currencyList } = useCurrencies();
   const { currency } = useAppSelector((state) => state.currencyLanguage);
 
   return (
-    <div className="flex items-center">
-      {status === "error" ? (
+    <>
+      {currencyList === undefined ? (
         "unable to fetch price"
-      ) : status === "loading" ? (
-        "loading ..."
+      ) : currencyList === null ? (
+        <LineLoader />
       ) : (
         <FormatCurrency
           price={price}
-          oldPrice={oldPrice}
           isProduct={isProduct}
-          currencies={currencies}
+          currencies={currencyList}
           currency={currency}
-          className={className}
         />
       )}
-    </div>
+    </>
   );
 }
 

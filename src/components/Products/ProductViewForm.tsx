@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback } from "react";
 import { ProductProps } from "@/types";
 import useAlgoliaEvents from "@/hooks/useAlgoliaEvents";
@@ -105,7 +104,7 @@ export default function ProductViewForm({
                 </select>
                 <button
                   aria-label="Add to Cart"
-                  className="btn btn-primary btn-sm"
+                  className="text-sm"
                   type="submit"
                 >
                   <i className="ci-cart fs-sm me-1"></i>
@@ -117,7 +116,7 @@ export default function ProductViewForm({
         ) : (
           <button
             aria-label="Add to Cart"
-            className="bg-red-500 hover:bg-red-400 text-white rounded-lg p-2 m-1 text-xs"
+            className="bg-red-500 hover:bg-red-400 text-white rounded-lg p-2 m-1 text-sm"
             type="submit"
           >
             <i className="ci-cart fs-sm me-1"></i>
@@ -128,7 +127,7 @@ export default function ProductViewForm({
       <div className="text-center">
         <button
           aria-label="Product Quick View"
-          className="hover:text-red-500 text-xs"
+          className="hover:text-red-500 text-sm"
           onClick={algoliaViewHandler}
           data-bs-toggle="quickViewModal"
         >

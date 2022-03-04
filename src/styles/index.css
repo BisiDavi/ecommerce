@@ -199,7 +199,7 @@ span.ais-Menu-label {
 
 /* media query */
 @media (min-width: 768px) {
-  .related-products ul#splide02-list {
-    min-height: 480px;
+  .related-products ul.splide__list {
+    min-height: 500px;
   }
 }

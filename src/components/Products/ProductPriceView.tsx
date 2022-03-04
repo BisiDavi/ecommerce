@@ -1,26 +1,23 @@
 import FormattedPrice from "@/lib/formatPrice";
 import RatingStar from "@/components/Rating/RatingStar";
-import styles from "@/styles/ui.module.css";
 
 export default function ProductPriceView({ product }: any) {
   return (
     <div className="flex justify-between">
-      <ul className="product-price flex items-center sm:flex-col lg:flex-row">
-        <li className={`mx-1 ${styles.price}`}>
-          <FormattedPrice
-            className="font-bold"
-            price={product.price}
-            isProduct
-          />
+      <ul className="product-price flex flex-col items-start">
+        <li className="text-md font-medium">
+          <div className="text-blue-800">
+            <FormattedPrice
+              className="font-bold"
+              price={product.price}
+              isProduct
+            />
+          </div>
         </li>
-        {product.hkd_compare_at_price > 0 && (
-          <li className="mx-1">
-            <del className={`text-xs ${styles.oldPrice} `}>
-              <FormattedPrice
-                price={product.hkd_compare_at_price}
-                oldPrice
-                isProduct
-              />
+        {product.rrp && (
+          <li className="text-start">
+            <del className="text-md text-blue-800">
+              <FormattedPrice price={product.rrp} isProduct />
             </del>
           </li>
         )}
@@ -37,28 +34,6 @@ export default function ProductPriceView({ product }: any) {
           ""
         )}
       </div>
-      <style jsx>
-        {`
-          .product-price {
-            padding: 0px;
-          }
-          .product-price li {
-            list-style: none;
-            padding: 0px;
-          }
-          ul.product-price {
-            font-size: 13px;
-          }
-          .reviewRating p {
-            font-size: 12px;
-          }
-          @media (max-width: 768px) {
-            .reviewRating p.review {
-              font-size: 10px;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 }

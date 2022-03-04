@@ -11,7 +11,7 @@ function CurrencyDropdownComponent() {
   const dispatch = useAppDispatch();
   const { isLoading, isSuccessful, hasError } = useToast();
   const { selectCurrencies } = useCurrency();
-  const [currencies, status] = useCurrencies();
+  const { currencyList } = useCurrencies();
 
   const { currency } = useAppSelector((state) => state.currencyLanguage);
 
@@ -45,17 +45,18 @@ function CurrencyDropdownComponent() {
       });
   }
 
-  return status === "error" ? (
+  return currencyList === undefined ? (
     <p>unable to load currencies</p>
-  ) : status === "loading" ? (
+  ) : currencyList === null ? (
     <p>loading currencies...</p>
   ) : (
     <Dropdown dropdownText={<DropdownText />}>
-      {currencies.map((item, index) => (
-        <DropdownItem onClick={selectCurrency} key={index}>
-          {item.symbol} {item.code}
-        </DropdownItem>
-      ))}
+      {currencyList &&
+        currencyList?.map((item, index) => (
+          <DropdownItem onClick={selectCurrency} key={index}>
+            {item.symbol} {item.code}
+          </DropdownItem>
+        ))}
     </Dropdown>
   );
 }

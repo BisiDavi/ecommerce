@@ -21,7 +21,7 @@ export default function PopularCategory({ category }: PopularCategoryProps) {
   const mobileView = useMediaQuery("(max-width:768px)");
   const size = mobileView
     ? { height: 300, width: 300 }
-    : { height: 250, width: 250 };
+    : { height: 200, width: 250 };
 
   return (
     <div className="popularCategory w-1/3 px-1 ">

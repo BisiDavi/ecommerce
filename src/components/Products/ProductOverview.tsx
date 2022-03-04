@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import useSwellProducts from "@/hooks/useSwellProducts";
 import ProductBanner from "@/components/Banner/ProductBanner";
 import ProductDescription from "@/components/Products/ProductDescription";
-import ProductGalleryDetails from "./ProductGalleryDetails";
+import ProductGalleryDetails from "@/components/Products/ProductGalleryDetails";
 import RelatedProductSlider from "@/components/Slider/RelatedProductSlider";
 import SpinnerRipple from "@/components/Loader/SpinnerLoader";
 

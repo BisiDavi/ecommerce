@@ -25,7 +25,7 @@ export default function ProductDetail({ product }: Props) {
   }
 
   return (
-    <div className="col-lg-5 pt-4 pt-lg-0">
+    <div className="w-1/3 pt-4 lg:pt-0">
       <div className="product-details ms-auto pb-3">
         <DynamicContactModal
           show={modal}

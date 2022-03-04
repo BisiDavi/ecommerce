@@ -27,7 +27,7 @@ export default function ProductGallery({ product, quickView }: Props) {
         src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/lib/js/lightgallery.min.js"
         strategy="afterInteractive"
       />
-      <div className="col-lg-7 pe-lg-0 pt-lg-4">
+      <div className="w-2/3 lg:pr-0 lg:pt-4">
         <ProductGalleryView product={product} />
         {!quickView && <PaymentNote />}
       </div>

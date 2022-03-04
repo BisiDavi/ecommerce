@@ -1,8 +1,9 @@
 export default function discountPrice(product: any) {
-  const priceDifference =
-    product.hkd_compare_at_price - product.hkd_selling_price;
-  const productPriceRatio = priceDifference / product.hkd_compare_at_price;
+  const rrp = Number(product.rrp);
+  const priceDifference = rrp - product.price;
+  const productPriceRatio = priceDifference / rrp;
 
-  const productDiscount = Math.ceil(productPriceRatio * 100);
-  return productDiscount;
+  const productDiscount = productPriceRatio * 100;
+  // console.log("productDiscount", productDiscount);
+  return productDiscount.toFixed(1);
 }

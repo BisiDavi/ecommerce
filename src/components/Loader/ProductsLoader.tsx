@@ -1,13 +1,16 @@
+import { useMemo } from "react";
 import ContentLoader from "react-content-loader";
 
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 export function ProductLoader(props: any) {
+  const loaderStyle = useMemo(() => ({ width: "100%" }), []);
+
   return (
     <ContentLoader
       speed={2}
       viewBox="0 0 250 250"
-      className="mx-4"
+      style={loaderStyle}
       backgroundColor="#e3d9d9"
       foregroundColor="#ada4a4"
       title="loading product..."
@@ -23,22 +26,34 @@ export function ProductLoader(props: any) {
   );
 }
 
-export default function LoadProducts() {
-  const tabWidth = useMediaQuery("(max-width:768px)");
-  const mediumTabWidth = useMediaQuery("(max-width:700px)");
-  const mobileWidth = useMediaQuery("(max-width:500px)");
+export function LineLoader(props: any) {
+  const loaderStyle = useMemo(() => ({ width: "100%" }), []);
 
-  const mobileStyle = mobileWidth
-    ? "w-full"
-    : mediumTabWidth
-    ? "w-1/2 mx-2"
-    : tabWidth
-    ? "w-1/3 mx-2"
-    : "w-1/4";
+  return (
+    <ContentLoader
+      speed={2}
+      viewBox="0 0 25 2"
+      style={loaderStyle}
+      backgroundColor="#e3d9d9"
+      className="mx-2"
+      foregroundColor="#ada4a4"
+      title="loading ..."
+      animate
+      {...props}
+    >
+      <rect x="0" y="0px" rx="0" ry="0" width="10" height="1" />
+    </ContentLoader>
+  );
+}
+
+export default function LoadProducts() {
+  const mobileWidth = useMediaQuery("(max-width:768px)");
+
+  const mobileStyle = mobileWidth ? "w-1/2" : "w-1/4 px-2";
 
   const productsArray = new Array(8).fill(0);
   return (
-    <div className="flex flex-wrap mt-4">
+    <div className="container flex flex-wrap">
       {productsArray.map((_, index: number) => (
         <div key={index} className={mobileStyle}>
           <ProductLoader />

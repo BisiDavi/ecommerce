@@ -18,7 +18,6 @@ export default function ProductPage({ pageProduct }: ProductPage) {
 type propsType = {
   params: { slug: string };
 };
-
 export async function getStaticProps({ params }: propsType) {
   const productData: any = await fetchAllSwellProducts();
   const results: any = await Promise.all(productData);

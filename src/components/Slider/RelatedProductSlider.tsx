@@ -12,37 +12,34 @@ export default function RelatedProductSlider({
 }: RelatedProductSliderProps) {
   return (
     <div className="container related-products mb-5">
-      <div className="row">
-        <h4 className="text-center text-2xl font-bold mb-4">Related Products</h4>
-        <Splide
-          options={{
-            autoplay: false,
-            perPage: 5,
-            type: "loop",
-            breakpoints: {
-              450: {
-                perPage: 2,
-                gap: "1rem",
-              },
-              600: {
-                perPage: 3,
-                gap: "1.5rem",
-              },
-              1200: {
-                perPage: 4,
-                gap: "2.5rem",
-              },
+      <h4 className="text-center text-2xl font-bold mb-4">Related Products</h4>
+      <Splide
+        options={{
+          autoplay: false,
+          perPage: 5,
+          type: "loop",
+          breakpoints: {
+            450: {
+              perPage: 2,
+              gap: "1rem",
             },
-          }}
-        >
-          {relatedProducts.map((item, index: number) => (
-            <SplideSlide key={index}>
-              <Product product={item} slider />
-            </SplideSlide>
-          ))}
-        </Splide>
-        <style jsx>{``}</style>
-      </div>
+            600: {
+              perPage: 3,
+              gap: "1.5rem",
+            },
+            1200: {
+              perPage: 4,
+              gap: "2.5rem",
+            },
+          },
+        }}
+      >
+        {relatedProducts.map((item, index: number) => (
+          <SplideSlide key={index}>
+            <Product product={item} slider />
+          </SplideSlide>
+        ))}
+      </Splide>
     </div>
   );
 }
