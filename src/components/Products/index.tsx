@@ -107,9 +107,7 @@ export default function Product({
         </Link>
         <div className="flex flex-col p-1 lg:py-3">
           <Link
-            href={`/collections/vendors/${replaceSpaceWithHypen(
-              product.vendor
-            )}`}
+            href={`/shop/vendors/${replaceSpaceWithHypen(product.vendor)}`}
             passHref
           >
             <a className="text-xs hover:text-red-500">{product.vendor}</a>

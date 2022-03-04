@@ -64,9 +64,7 @@ export default function ProductDetail({ product }: Props) {
         <ProductForm product={product} />
         <div className="flex flex-col flex-start align-items-start">
           <Link
-            href={`/collections/vendors/${replaceSpaceWithHypen(
-              product.vendor
-            )}`}
+            href={`/shop/vendors/${replaceSpaceWithHypen(product.vendor)}`}
             passHref
           >
             <a className="notEnoughLink btn btn-link link-accent text-decoration-underline px-0">

@@ -25,7 +25,7 @@ export default function PopularCategory({ category }: PopularCategoryProps) {
 
   return (
     <div className="popularCategory w-1/3 px-1 ">
-      <Link href={`/collections/product-type/${category.slug}`} passHref>
+      <Link href={`/shop/product-type/${category.slug}`} passHref>
         <a
           onClick={() => selectedFooterCategory(category.name)}
           className="imgLink flex flex-col text-center text-decoration-none"

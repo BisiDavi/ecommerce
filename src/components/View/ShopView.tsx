@@ -37,19 +37,19 @@ export default function ShopView({
         distinct
         enablePersonalization={true}
       />
-      <div className="w-full flex bg-gray-700 justify-between py-14">
-        <div className="container m-auto mb-3 mb-lg-0 pt-lg-2 flex items-center justify-between">
-          <nav aria-label="w-1/2 items-center breadcrumb flex bg-gray-700 ">
-            <ol className="breadcrumb text-white flex flex-nowrap justify-center">
-              <li className="breadcrumb-item hover:text-red-500">
+      <div className="w-full flex bg-gray-700 justify-between h-52">
+        <div className="container m-auto mb-3 mb-lg-0 pt-lg-2 flex flex-col h-32 relative">
+          <nav className="w-full items-start  justify-start flex bg-gray-700 ">
+            <ol className="text-white lg:flex justify-center lg:justify-start">
+              <li className="mb-0">
                 <Link href="/" passHref>
-                  <a className="text-nowrap">Home</a>
+                  <a className="hover:text-red-500">Home</a>
                 </Link>
               </li>
-              <li className="breadcrumb-item mx-2">
+              <li className="mx-2">
                 <span> &gt; </span>
               </li>
-              <li className="breadcrumb-item text-nowrap active">Shop</li>
+              <li className="text-nowrap active">Shop</li>
             </ol>
             <AlgoliaCurrentRefinement />
           </nav>

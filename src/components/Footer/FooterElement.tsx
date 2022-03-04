@@ -7,7 +7,7 @@ function FooterWidgetLink({
 }: any) {
   const slug = (contentLink: any) =>
     productType
-      ? `/collections/product-type/${contentLink.slug}`
+      ? `/shop/product-type/${contentLink.slug}`
       : `/${contentLink.slug}`;
 
   const onClickFunc = productType

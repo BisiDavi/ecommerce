@@ -56,9 +56,7 @@ export function SingleVendorList({
             }) => (
               <div key={item.label} className="accordion-item my-4">
                 <Link
-                  href={`/collections/vendors/${replaceSpaceWithHypen(
-                    item.label
-                  )}`}
+                  href={`/shop/vendors/${replaceSpaceWithHypen(item.label)}`}
                   passHref
                 >
                   <a className={`my-4 ${selectedVendor(item.label)}`}>

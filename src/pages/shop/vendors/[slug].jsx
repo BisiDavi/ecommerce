@@ -43,7 +43,7 @@ export async function getStaticPaths() {
   return {
     paths:
       vendors?.map(
-        (vendor) => `/collections/vendors/${replaceSpaceWithHypen(vendor)}`
+        (vendor) => `/shop/vendors/${replaceSpaceWithHypen(vendor)}`
       ) || [],
     fallback: false,
   };

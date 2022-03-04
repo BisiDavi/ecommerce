@@ -29,7 +29,7 @@ export default function ProductBanner({ product }: Props) {
               </li>
               <li className="breadcrumb-item text-nowrap">
                 <Link
-                  href={`/collections/vendors/${replaceSpaceWithHypen(
+                  href={`/shop/vendors/${replaceSpaceWithHypen(
                     product.vendor
                   )}`}
                   passHref

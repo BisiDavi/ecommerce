@@ -14,7 +14,7 @@ export default function CategoryMetatag({ collection }: Props): JSX.Element {
       <meta property="og:type" content="collection" />
       <meta
         property="og:url"
-        content={`https://www.livehealthy.hk/collections/${collection.slug}`}
+        content={`https://www.livehealthy.hk/shop/${collection.slug}`}
         key="ogurl"
       />
       <meta

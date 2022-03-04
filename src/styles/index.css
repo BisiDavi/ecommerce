@@ -39,7 +39,7 @@ ul.splide__pagination {
 .cz-range-slider-ui .noUi-connect {
   background-color: #fe696a;
 }
-.noUi-horizontal .noUi-handle {
+div.noUi-horizontal .noUi-handle {
   width: 28px;
   height: 28px;
   right: -17px;
@@ -161,18 +161,16 @@ form.ais-SearchBox-form {
 }
 
 form.ais-SearchBox-form button svg {
-  height: 15px;
-  width: 15px;
-}
-
-form.ais-SearchBox-form button.ais-SearchBox-rest {
-  margin-left: -5px;
+  height: 14px;
+  width: 14px;
 }
 
 form.ais-SearchBox-form button.ais-SearchBox-submit {
-  margin-left: -40px;
+  margin-left: -45px;
 }
-
+form.ais-SearchBox-form button.ais-SearchBox-reset {
+  margin-left: 5px;
+}
 .ais-RefinementList-searchBox,
 .ais-Menu-searchBox {
   margin-bottom: 10px;

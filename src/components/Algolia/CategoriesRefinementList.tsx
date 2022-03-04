@@ -41,7 +41,7 @@ function CategoriesList({
             <div key={item.label} className="accordion-item">
               <h3 className="text-sm">
                 <Link
-                  href={`/collections/${replaceSpaceWithHypen(item.value)}`}
+                  href={`/shop/${replaceSpaceWithHypen(item.value)}`}
                   passHref
                 >
                   <a className="cat-link">

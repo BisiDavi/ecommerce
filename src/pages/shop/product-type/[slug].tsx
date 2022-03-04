@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import Applayout from "@/layout/Applayout";
 import { categoryType } from "@/types";
 import CollectionMarketplace from "@/components/View/CollectionMarketplace";
@@ -39,8 +38,7 @@ export async function getStaticPaths() {
   return {
     paths:
       storeCategories?.map(
-        (collection: { slug: any }) =>
-          `/collections/product-type/${collection.slug}`
+        (collection: { slug: any }) => `/shop/product-type/${collection.slug}`
       ) || [],
     fallback: false,
   };
