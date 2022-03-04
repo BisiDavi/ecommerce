@@ -48,6 +48,10 @@ export default function Product({
       ? product.images[1]?.file?.url
       : product.images[0]?.file?.url;
 
+  const imageAlt = product.image_alt_text
+    ? product.image_alt_text[0]
+    : product.name;
+
   function algoliaClickedProductAfterSearch() {
     if (algoliaEvent) {
       clickedItemAfterSearch(
@@ -96,7 +100,7 @@ export default function Product({
                 height={300}
                 width={300}
                 src={productImage}
-                alt={product?.image_alt_text[0]}
+                alt={imageAlt}
                 placeholder="blur"
                 blurDataURL={productImage}
                 loading="lazy"
