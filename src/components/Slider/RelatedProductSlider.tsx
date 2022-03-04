@@ -13,10 +13,10 @@ export default function RelatedProductSlider({
   return (
     <div className="container related-products mb-5">
       <div className="row">
-        <h4 className="text-center mb-4">Related Products</h4>
+        <h4 className="text-center text-2xl font-bold mb-4">Related Products</h4>
         <Splide
           options={{
-            autoplay: true,
+            autoplay: false,
             perPage: 5,
             type: "loop",
             breakpoints: {

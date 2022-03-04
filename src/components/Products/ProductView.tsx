@@ -9,7 +9,7 @@ export function PaymentNote() {
   return (
     <div className="payment-partners flex flex-col mt-5">
       <img
-        src="/img/payment-card.png"
+        src="/payment-card.png"
         className="payment-card"
         alt="we are accept visa, mastercard cards and bank transfers"
       />
@@ -21,7 +21,6 @@ export function PaymentNote() {
       </div>
       <div className="border w-100 p-3 mt-4 rounded">
         <p>
-          {" "}
           We accept bank deposits through all major networks globally including
           ACH,Fedwire, SWIFT,IBAN and BSB.{" "}
         </p>

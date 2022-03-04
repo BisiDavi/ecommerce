@@ -11,32 +11,31 @@ export default function RewardButton({ showChat, onClick }: Props) {
       <button
         aria-label="display rewards"
         onClick={onClick}
-        className="rewardButton"
+        className="rewardButton bg-red-500"
       >
         {!showChat ? (
           <span className="imgContainer">
             <Image
-              src="/img/cartLoveIcon.png"
+              src="/cartLoveIcon.png"
               alt="shopping cart with rewards"
-              height="25px"
-              width="25px"
+              height="40px"
+              width="40px"
             />{" "}
-            Rewards
-          </span>
+            <p className="text-xs font-bold mx-1">Rewards</p>
+          </span>  
         ) : (
           <span className="cancel">X</span>
         )}
       </button>
       <style jsx>{`
         button.rewardButton {
-          height: 60px;
-          max-width: 140px;
+          height: 40px;
+          max-width: 120px;
           color: white;
           padding: 20px;
           border-radius: 30px;
           display: flex;
           align-items: center;
-          background-color: #f79f24;
           border: none;
           position: absolute;
           right: 30px;

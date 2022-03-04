@@ -4,7 +4,6 @@ import useSwellProducts from "@/hooks/useSwellProducts";
 import ProductBanner from "@/components/Banner/ProductBanner";
 import ProductDescription from "@/components/Products/ProductDescription";
 import ProductGalleryDetails from "./ProductGalleryDetails";
-import ProductReviews from "./ProductReviews";
 import RelatedProductSlider from "@/components/Slider/RelatedProductSlider";
 import SpinnerRipple from "@/components/Loader/SpinnerLoader";
 
@@ -22,7 +21,6 @@ export default function ProductOverview({ pageProduct }: ProductOverviewProps) {
       <ProductBanner product={pageProduct} />
       <ProductGalleryDetails product={pageProduct} />
       <ProductDescription product={pageProduct} />
-      <ProductReviews product={pageProduct} />
       {status === "error" ? (
         ""
       ) : status === "loading" ? (

@@ -68,12 +68,12 @@ export default function Product({
   const productClass = homepage
     ? "lg:w-1/4"
     : slider
-    ? "w-full"
+    ? "md:w-full"
     : "lg:w-1/3 md:w-1/4 w-1/2";
 
   return (
     <div
-      className={`${productClass} md:w-1/3 sm:w-1/2 ${styles.product} hover:shadow-lg rounded-lg p-2`}
+      className={`${productClass} sm:w-1/2 ${styles.product} hover:shadow-lg rounded-lg p-2`}
     >
       <DynamicProductMetatags product={product} />
       <div className="flex flex-col card product-card p-1 p-md-2">
