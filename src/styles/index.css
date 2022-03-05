@@ -27,6 +27,33 @@ ul.splide__pagination {
   display: none;
 }
 
+/* style scrollbar */
+body::-webkit-scrollbar,
+.products-list::-webkit-scrollbar,
+.product-gallery-thumblist::-webkit-scrollbar,
+.quickView-description::-webkit-scrollbar,
+.ais-RefinementList-list::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track,
+.products-list::-webkit-scrollbar-track,
+.product-gallery-thumblist::-webkit-scrollbar-track,
+.quickView-description::-webkit-scrollbar-track,
+.ais-RefinementList-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb,
+.products-list::-webkit-scrollbar-thumb,
+.product-gallery-thumblist::-webkit-scrollbar-thumb,
+.quickView-description::-webkit-scrollbar-thumb,
+.ais-RefinementList-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border: 0px !important;
+}
+
 /* price range slider */
 
 .cz-range-slider-ui {
@@ -182,6 +209,12 @@ span.ais-Menu-label {
   font-family: "Rubik", sans-serif;
 }
 
+/* product page description */
+.productInfo div h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 /* product description */
 .container.productDescription h6 {
   margin-bottom: 0px !important;
@@ -196,6 +229,19 @@ span.ais-Menu-label {
 .productInfo p {
   margin-bottom: 6px;
 }
+
+/* slider blog */
+/* .blog-entry-meta-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #4b566b;
+  text-decoration: none !important;
+  z-index: 5;
+} */
 
 /* media query */
 @media (min-width: 768px) {

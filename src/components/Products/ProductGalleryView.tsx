@@ -74,18 +74,18 @@ export default function ProductGalleryView({ product }: Props) {
           />
         )}
       </div>
-      <div className="product-gallery-thumblist order-1 border-2 border-red-500 rounded-md w-1/5">
+      <div className="product-gallery-thumblist order-1 w-1/5">
         {images?.map((image: any, index) => (
           <a
-            className={`product-gallery-thumblist-item ${activethumbnailImg(
+            className={`product-thumblist-item items-center justify-center flex hover:border-gray-300 hover:border-2 ${activethumbnailImg(
               index
             )}`}
             onClick={() => updateActiveImage(index)}
             key={index}
           >
             <Image
-              height={250}
-              width={250}
+              height={150}
+              width={150}
               src={image.file.url}
               alt={product.image_alt_text[index]}
             />
@@ -94,12 +94,18 @@ export default function ProductGalleryView({ product }: Props) {
       </div>
       <style jsx>
         {`
+          .product-thumblist-item {
+            width: 150px;
+          }
+          .product-thumblist-item.active {
+            border: 1px solid red;
+            opacity: 0.8;
+          }
           .product-gallery-thumblist.order-1 {
-            height: 400px;
+            height: 720px;
             overflow-y: auto;
             overflow-x: hidden;
           }
-
           @media (max-width: 768px) {
             .product-gallery-thumblist.order-1 {
               display: flex;

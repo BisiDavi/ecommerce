@@ -16,11 +16,11 @@ const DynamicBlogPagination = dynamic(
 export default function Blog() {
   return (
     <Applayout title="Blog Gist">
-      <div className="bg-secondary py-4">
-        <div className="container d-lg-flex justify-between py-2 py-lg-3">
-          <div className="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+      <div className="bg-gray-100 py-4 w-full">
+        <div className="container m-auto flex justify-between py-2 lg:py-3">
+          <div className="lg:order-2 mb-3 lg:mb-0 lg:pt-2">
             <nav aria-label="breadcrumb">
-              <ol className="breadcrumb flex-lg-nowrap justify-center justify-content-lg-start">
+              <ol className="flex lg:flex-nowrap justify-center lg:justify-content-start">
                 <li className="breadcrumb-item">
                   <Link href="/index" passHref>
                     <a className="text-nowrap">
@@ -28,20 +28,17 @@ export default function Blog() {
                     </a>
                   </Link>
                 </li>
-                <li className="breadcrumb-item text-nowrap">
+                <li className="text-nowrap">
                   <a href="#">Blog</a>
                 </li>
-                <li
-                  className="breadcrumb-item text-nowrap active"
-                  aria-current="page"
-                >
+                <li className="text-nowrap active" aria-current="page">
                   Grid no sidebar
                 </li>
               </ol>
             </nav>
           </div>
-          <div className="order-lg-1 pe-lg-4 text-center text-lg-start">
-            <h1 className="h3 mb-0">Blog grid no sidebar</h1>
+          <div className="order-1 text-center lg:text-start">
+            <h1 className="text-3xl mb-0">Blog grid no sidebar</h1>
           </div>
         </div>
       </div>

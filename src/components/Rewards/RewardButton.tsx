@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AiFillGift } from "react-icons/ai";
 
 interface Props {
   onClick: () => void;
@@ -11,18 +11,13 @@ export default function RewardButton({ showChat, onClick }: Props) {
       <button
         aria-label="display rewards"
         onClick={onClick}
-        className="rewardButton bg-red-500"
+        className="rewardButton bg-red-500 "
       >
         {!showChat ? (
-          <span className="imgContainer">
-            <Image
-              src="/cartLoveIcon.png"
-              alt="shopping cart with rewards"
-              height="40px"
-              width="40px"
-            />{" "}
-            <p className="text-xs font-bold mx-1">Rewards</p>
-          </span>  
+          <span className="imgContainer flex items-center">
+            <AiFillGift size={20} />
+            <p className="text-xs font-bold mx-1 mb-0">Rewards</p>
+          </span>
         ) : (
           <span className="cancel">X</span>
         )}
