@@ -1,9 +1,10 @@
-import { IoTimeSharp, IoMail , IoLocationSharp} from "react-icons/io5";
+import { IoTimeSharp, IoMail, IoLocationSharp } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaYoutube, FaHeadset } from "react-icons/fa";
 import { IoRocket } from "react-icons/io5";
 import { RiExchangeDollarLine } from "react-icons/ri";
 import { HiCreditCard } from "react-icons/hi";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface Props {
   icon: string;
@@ -35,6 +36,10 @@ export default function Icons({ icon, className, size }: Props) {
       return <FaHeadset size={size} className={className} />;
     case "creditcard":
       return <HiCreditCard size={size} className={className} />;
+    case "arrow-prev":
+      return <IoIosArrowBack size={size} className={className} />;
+    case "arrow-next":
+      return <IoIosArrowForward size={size} className={className} />;
     default:
       return null;
   }

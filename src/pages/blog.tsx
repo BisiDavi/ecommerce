@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { HiHome } from "react-icons/hi";
 
 import Applayout from "@/layout/Applayout";
 import blogContent from "@/json/blog.json";
@@ -10,7 +11,7 @@ const BlogSlider = dynamic(() => import("@/components/Slider/BlogGridSlider"), {
 });
 
 const DynamicBlogPagination = dynamic(
-  () => import("../components/Blog/BlogListPagination")
+  () => import("@/components/Blog/BlogListPagination")
 );
 
 export default function Blog() {
@@ -21,32 +22,31 @@ export default function Blog() {
           <div className="lg:order-2 mb-3 lg:mb-0 lg:pt-2">
             <nav aria-label="breadcrumb">
               <ol className="flex lg:flex-nowrap justify-center lg:justify-content-start">
-                <li className="breadcrumb-item">
+                <li className="hover:text-red-500">
                   <Link href="/index" passHref>
-                    <a className="text-nowrap">
-                      <i className="ci-home"></i>Home
+                    <a className="flex items-center">
+                      <HiHome className="mx-1" />
+                      Home
                     </a>
                   </Link>
                 </li>
-                <li className="text-nowrap">
+                <li className="mx-2">&gt;</li>
+                <li className="text-gray-500">
                   <a href="#">Blog</a>
-                </li>
-                <li className="text-nowrap active" aria-current="page">
-                  Grid no sidebar
                 </li>
               </ol>
             </nav>
           </div>
           <div className="order-1 text-center lg:text-start">
-            <h1 className="text-3xl mb-0">Blog grid no sidebar</h1>
+            <h1 className="text-3xl mb-0">Blog</h1>
           </div>
         </div>
       </div>
-      <div className="container pb-5 mb-2 mb-md-4">
+      <div className="container pb-5 mb-2 md:mb-4">
         <BlogSlider />
         <hr className="mt-5" />
-        <div className="pt-5 mt-md-2">
-          <div className="masonry-grid" data-columns="3">
+        <div className="pt-5 md:mt-2">
+          <div className="flex flex-wrap mb-8">
             {blogContent.post.map((content) => (
               <BlogArticleExcerpt key={content.title} content={content} />
             ))}

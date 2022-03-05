@@ -22,7 +22,7 @@ export default function BlogGridSlider() {
         options={{
           perPage: 2,
           rewind: true,
-          autoplay: false,
+          autoplay: true,
           type: "loop",
         }}
       >

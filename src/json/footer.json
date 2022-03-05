@@ -34,7 +34,7 @@
           "links": [
             { "name": "About company", "slug": "about-us" },
             { "name": "Contacts", "slug": "contact-us" },
-            { "name": "News", "slug": "blog" }
+            { "name": "Blog", "slug": "blog" }
           ]
         }
       ]
