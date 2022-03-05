@@ -140,10 +140,10 @@ export function NavbarDropdown({
         <div className="flex flex-col relative">
           <div
             onClick={toggleSlideCartMobile}
-            className="absolute justify-center bg-gray-200 rounded-full h-6 w-6 -mt-8 mr-4 flex items-center"
+            className="absolute justify-center bg-red-200 rounded-full h-6 w-6 -mt-8 mr-4 flex items-center"
           >
             {cart?.items?.length > 0 && (
-              <span className="text-white bg-red-500">{cart?.items?.length}</span>
+              <span className="text-white">{cart?.items?.length}</span>
             )}
           </div>
           <BsCart4 fontSize={24} />

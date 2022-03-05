@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Image from "@/components/Image";
 import footerBottomContent from "@/json/footer-bottom.json";
 import Logo from "@/components/Logo";
-import DisplaySocialIcons from "@/lib/DisplaySocialIcons";
+import Icons from "@/components/Icons";
 
 const CurrencyDropdown = dynamic(
   () => import("@/components/Dropdown/CurrencyDropdown")
@@ -14,7 +14,7 @@ export function FooterBottomSocials() {
       <div className="mb-3 w-2/3 flex items-center justify-between">
         {footerBottomContent.social.map((data, index) => (
           <a key={`${data.name}-${index}`} href={data.link}>
-            <DisplaySocialIcons
+            <Icons
               icon={data.name}
               className="hover:text-red-500 text-white"
               size={25}
@@ -83,7 +83,7 @@ export function FooterBottomFeatures() {
       {footerBottomContent.features.map((content) => (
         <div key={content.title} className="w-1/4">
           <div className="flex">
-            <DisplaySocialIcons
+            <Icons
               className="text-red-500 hover:text-red-300 mr-4"
               icon={content.icon}
               size={30}

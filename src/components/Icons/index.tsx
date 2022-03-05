@@ -1,3 +1,5 @@
+import { IoTimeSharp, IoMail , IoLocationSharp} from "react-icons/io5";
+import { FiPhoneCall } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaYoutube, FaHeadset } from "react-icons/fa";
 import { IoRocket } from "react-icons/io5";
 import { RiExchangeDollarLine } from "react-icons/ri";
@@ -5,12 +7,20 @@ import { HiCreditCard } from "react-icons/hi";
 
 interface Props {
   icon: string;
-  className : string;
-  size:number
+  className?: string;
+  size?: number;
 }
 
-export default function DisplaySocialIcons({ icon, className, size }: Props) {
+export default function Icons({ icon, className, size }: Props) {
   switch (icon) {
+    case "location":
+      return <IoLocationSharp size={size} className={className} />;
+    case "phone":
+      return <FiPhoneCall size={size} className={className} />;
+    case "mail":
+      return <IoMail size={size} className={className} />;
+    case "time":
+      return <IoTimeSharp size={size} className={className} />;
     case "facebook":
       return <FaFacebook size={size} className={className} />;
     case "instagram":

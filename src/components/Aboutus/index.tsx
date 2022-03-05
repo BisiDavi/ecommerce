@@ -17,34 +17,43 @@ interface contentProps {
 
 export default function Aboutus({ content }: contentProps) {
   const imageOrder =
-    content.imgPosition === "left" ? "order-md-1" : "order-md-2";
+    content.imgPosition === "left" ? "md:order-1" : "md:order-2";
   const textOrder =
-    content.imgPosition === "left" ? "order-md-2" : "order-md-1";
+    content.imgPosition === "left" ? "md:order-2" : "md:order-1";
 
   return (
-    <section className="row g-0">
-      <div
-        className={`about-us-bg col-md-6 bg-position-center bg-size-cover bg-secondary ${imageOrder}`}
-      ></div>
-      <div className={`col-md-6 px-3 px-md-5 py-5 ${textOrder}`}>
-        <div className="content-text mx-auto py-lg-5">
-          <h2 className="h3 pb-3">{content.title}</h2>
-          <p className="fs-sm pb-3 text-muted">{content.text}</p>
+    <section className="flex items-center">
+      <div className={`about-us-bg w-1/2 bg-position-center ${imageOrder}`}>
+        <img src={content.image} />
+      </div>
+      <div className={`w-1/2 py-5 px-24 ${textOrder}`}>
+        <div className="content-text mx-auto lg:py-5">
+          <h2 className="text-2xl font-medium pb-3">{content.title}</h2>
+          <p className="pb-3 text-lg">{content.text}</p>
           {content.buttons?.map((button) => (
             <Link key={button.color} href={button.link} passHref>
-              <a className={`btn ${button.color} btn-shadow`}>{button.text}</a>
+              <button
+                className={`btn p-2 px-4 rounded-md h-10 text-white ${button.color} shadow-lg`}
+              >
+                {button.text}
+              </button>
             </Link>
           ))}
         </div>
       </div>
       <style jsx>
         {`
-          .about-us-bg {
-            min-height: 15rem;
-            background-image: url(${content.image});
+          .btn-red {
+            background-color: #fe696a;
           }
-          .content-text {
-            max-width: 35rem;
+          button.btn:hover {
+            opacity: 0.8;
+          }
+          .btn-blue {
+            background-color: #4e54c8;
+          }
+          .btn-yellow {
+            background-color: #fea569;
           }
         `}
       </style>

@@ -2,47 +2,47 @@
   "aboutUs": [
     {
       "title": "Search, Select, Buy online",
-      "image": "img/about/01.webp",
+      "image": "/pages/about/01.webp",
       "imgPosition": "left",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor tristique nec. Tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet aliquam id diam maecenas ultricies mi eget.",
       "buttons": [
         {
           "text": "View products",
           "link": "/shop",
-          "color": "btn-primary"
+          "color": "btn-red"
         }
       ]
     },
     {
       "title": "Fast delivery worldwide",
-      "image": "img/about/02.webp",
+      "image": "/pages/about/02.webp",
       "imgPosition": "right",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor tristique nec. Tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet aliquam id diam maecenas ultricies mi eget.",
       "buttons": [
         {
           "text": "Shipping details",
           "link": "/shop",
-          "color": "btn-accent"
+          "color": "btn-blue"
         }
       ]
     },
     {
       "title": "Great mobile app. Shop on the go",
-      "image": "img/about/03.webp",
+      "image": "/pages/about/03.webp",
       "imgPosition": "left",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor tristique nec. Tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet aliquam id diam maecenas ultricies mi eget.",
       "imgLinks": ["", ""]
     },
     {
       "title": "Shop offline. Cozy outlet stores",
-      "image": "img/about/04.webp",
+      "image": "/pages/about/04.webp",
       "imgPosition": "right",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor tristique nec. Tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet aliquam id diam maecenas ultricies mi eget.",
       "buttons": [
         {
           "text": "See outlet stores",
           "link": "/contact-us",
-          "color": "btn-warning"
+          "color": "btn-yellow"
         }
       ]
     }
@@ -52,37 +52,37 @@
     "description": "People behind your great shopping experience",
     "teams": [
       {
-        "image": "/img/team/team-3.webp",
+        "image": "/pages/about/team-3.webp",
         "name": "Jonathan Doe",
         "role": "CEO, Co-founder",
         "email": "johndoe@example.com"
       },
       {
-        "image": "/img/team/team-4.webp",
+        "image": "/pages/about/team-4.webp",
         "name": "Barbara Palson",
         "role": "Chief of Marketing",
         "email": "b.palson@example.com"
       },
       {
-        "image": "/img/team/team-6.webp",
+        "image": "/pages/about/team-6.webp",
         "name": "William Smith",
         "role": "Financial director",
         "email": "w.smith@example.com"
       },
       {
-        "image": "/img/team/team-2.webp",
+        "image": "/pages/about/team-2.webp",
         "name": "Amanda Gallaher",
         "role": "Lead UX designer",
         "email": "a.gallaher@example.com"
       },
       {
-        "image": "/img/team/team-1.webp",
+        "image": "/pages/about/team-1.webp",
         "name": "Benjamin Miller",
         "role": "Website development",
         "email": "b.miller@example.com"
       },
       {
-        "image": "/img/team/team-5.webp",
+        "image": "/pages/about/team-5.webp",
         "name": "Miguel Rodrigez",
         "role": "Content manager",
         "email": "m.rodrigez@example.com"
@@ -90,7 +90,7 @@
     ]
   },
   "hireTalent": {
-    "bgImage": "/img/about/03.webp"
+    "bgImage": "//pages/about/03.webp"
   },
   "form": [
     { "className": "col-sm-6", "placeholder": "Your name", "type": "text" },
