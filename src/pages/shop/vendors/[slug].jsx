@@ -77,6 +77,8 @@ export async function getStaticPaths() {
   const productData = await fetchAllSwellProducts();
   const results = await Promise.all(productData);
 
+  console.log("results", results);
+
   let vendorArray = [];
   results[0].map((result) => vendorArray.push(result.vendor));
 

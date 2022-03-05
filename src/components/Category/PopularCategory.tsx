@@ -47,7 +47,7 @@ export default function PopularCategory({ category }: PopularCategoryProps) {
       </Link>
       <style jsx>
         {`
-          .popularCategory img:hover {
+          .popularCategory a:hover {
             -webkit-transform: scale(1.03);
             -moz-transform: scale(1.03);
             -ms-transform: scale(1.03);

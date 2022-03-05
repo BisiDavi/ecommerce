@@ -14,7 +14,7 @@ export default function CategoriesSlider() {
       {status === "error" ? (
         "error loading categories"
       ) : status === "loading" ? (
-        <LoadCategory arrayType={4} gridStyle="w-1/2" />
+        <LoadCategory arrayType={2} gridStyle="w-1/2 m-auto" />
       ) : (
         <Splide
           className="lg:px-12 px-4"

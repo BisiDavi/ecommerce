@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { memo } from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 import Product from "@/components/Products";
 import LoadProducts from "@/components/Loader/ProductsLoader";
@@ -38,10 +39,11 @@ function TrendingProductsCatalog() {
               />
             )
           )}
-          <div className="text-center pt-1 mt-1 mb-3">
+          <div className="my-4 m-auto">
             <Link href="/shop" passHref>
-              <a className="btn btn-outline-accent">
-                More products<i className="ci-arrow-right ms-1"></i>
+              <a className="bg-red-500 items-center flex text-center p-2 border-2 rounded-lg text-white hover:border-red-500 hover:bg-white hover:text-red-500">
+                More products
+                <AiOutlineArrowRight className="ml-1" />
               </a>
             </Link>
           </div>

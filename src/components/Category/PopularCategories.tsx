@@ -5,7 +5,6 @@ import LoadingPopularCategory from "@/components/Loader/PopularCategoryLoader";
 export default function PopularCategories() {
   const [data, status] = useCategoryData();
 
-  // re-render component on data change
   const topCategories = data?.results?.filter(
     (category: { topId: string }) => !category.topId
   );

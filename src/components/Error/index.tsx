@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Error404() {
   return (
     <div className="container py-5 mb-lg-3">
-      <div className="row justify-center pt-lg-4 text-center">
-        <div className="col-lg-5 col-md-7 col-sm-9">
+      <div className="justify-center pt-lg-4 text-center">
+        <div className="col-md-7 col-sm-9">
           <img
             className="d-block mx-auto mb-5"
-            src="/img/pages/404.png"
+            src="/pages/404.png"
             width="340"
             alt="404 Error"
           />
@@ -20,7 +20,7 @@ export default function Error404() {
           </p>
         </div>
       </div>
-      <div className="row justify-center">
+      <div className="flex items-center justify-center">
         <div className="col-xl-8 col-lg-10">
           <div className="row">
             <div className="col-sm-4 mb-3">

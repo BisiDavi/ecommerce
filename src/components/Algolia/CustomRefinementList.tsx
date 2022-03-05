@@ -13,7 +13,7 @@ export default function CustomRefinementList({ title, attribute }: Props) {
   return (
     <>
       <h5 className="mb-2 text-xl font-medium">{title}</h5>
-      {defaultRefinement ? (
+      {defaultRefinement && attribute === "vendor" ? (
         <RefinementList
           searchable={true}
           attribute={attribute}
