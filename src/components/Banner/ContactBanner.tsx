@@ -1,31 +1,30 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { HiHome } from "react-icons/hi";
 
 export default function ContactBanner() {
   return (
-    <div className="bg-secondary py-4">
-      <div className="container flex justify-between py-2 py-lg-3">
-        <div className="lg:order-2 mb-3 mb-lg-0 lg:pt-2">
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb lg:flex-nowrap justify-center justify-content-lg-start">
-              <li className="breadcrumb-item">
+    <div className="bg-gray-100 w-full py-8 mb-4">
+      <div className="container m-auto flex justify-between items-center py-2 lg:py-3">
+        <div className="lg:order-2 mb-3 lg:mb-0 lg:pt-2">
+          <nav aria-label="nav">
+            <ol className="flex lg:flex-nowrap justify-center">
+              <li className="hover:text-red-500 text-gray-500">
                 <Link href="/" passHref>
-                  <a className="text-nowrap">
-                    <i className="ci-home"></i>Home
+                  <a className="flex items-center">
+                    <HiHome className="mx-1" />
+                    Home
                   </a>
                 </Link>
               </li>
-              <li
-                className="breadcrumb-item text-nowrap active"
-                aria-current="page"
-              >
+              <li className="mx-2">&gt;</li>
+              <li className="text-gray-500" aria-current="page">
                 Contacts
               </li>
             </ol>
           </nav>
         </div>
         <div className="lg:order-1 lg:pr-4 text-center lg:text-start">
-          <h1 className="h3 mb-0">Contacts</h1>
+          <h1 className="text-2xl mb-0 text-gray-600">Contacts us</h1>
         </div>
       </div>
     </div>

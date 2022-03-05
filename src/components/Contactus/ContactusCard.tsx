@@ -1,3 +1,5 @@
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+
 import Icons from "@/components/Icons";
 import contactData from "@/json/contact-us.json";
 
@@ -19,9 +21,9 @@ export default function ContactusCard() {
                 />
                 <h3 className="text-xl mb-2">{content.title}</h3>
                 <p className="text-sm text-gray-500">{content.group.text1}</p>
-                <div className="text-md text-primary">
+                <div className="text-md hover:text-red-500 flex items-center justify-center">
                   Click to see map
-                  <i className="ci-arrow-right align-middle ms-1"></i>
+                  <BsFillArrowRightCircleFill className="mx-2" />
                 </div>
               </div>
             </a>
