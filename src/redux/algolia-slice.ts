@@ -7,6 +7,7 @@ const algoliaSlice = createSlice({
     viewSearch: false,
     query: null,
     closeSearchView: false,
+    defaultRefinement: null,
   },
   reducers: {
     updateSearchData(state, action: PayloadAction<any>) {
@@ -21,9 +22,17 @@ const algoliaSlice = createSlice({
     updateQuery(state, action: PayloadAction<any>) {
       state.query = action.payload;
     },
+    updateDefaultRefinement(state, action: PayloadAction<string>) {
+      state.defaultRefinement = action.payload;
+    },
   },
 });
 
-export const { updateSearchData, updateViewSearch, closeSearch, updateQuery } =
-  algoliaSlice.actions;
+export const {
+  updateSearchData,
+  updateViewSearch,
+  closeSearch,
+  updateQuery,
+  updateDefaultRefinement,
+} = algoliaSlice.actions;
 export default algoliaSlice.reducer;

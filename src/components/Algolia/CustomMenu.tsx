@@ -14,7 +14,7 @@ export default function CustomMenu({
   return (
     <>
       <div className="menu">
-        <h5 className="mb-2">{title}</h5>
+        <h5 className="mb-2 text-xl font-medium">{title}</h5>
         <Menu
           searchable={true}
           attribute={attribute}

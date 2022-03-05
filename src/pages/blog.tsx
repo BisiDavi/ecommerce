@@ -43,19 +43,15 @@ export default function Blog() {
         </div>
       </div>
       <div className="container pb-5 mb-2 mb-md-4">
-        {/*<!-- Featured posts carousel-->*/}
         <BlogSlider />
         <hr className="mt-5" />
         <div className="pt-5 mt-md-2">
-          {/*<!-- Entries grid-->*/}
           <div className="masonry-grid" data-columns="3">
-            {/*<!-- Entry-->*/}
             {blogContent.post.map((content) => (
               <BlogArticleExcerpt key={content.title} content={content} />
             ))}
           </div>
           <hr className="mb-4" />
-          {/*<!-- Pagination-->*/}
           <DynamicBlogPagination pagination={blogContent.pagination} />
         </div>
       </div>

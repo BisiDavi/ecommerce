@@ -5,7 +5,7 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim...",
       "tags": ["Travel", "Personal finance"],
       "author": "Emma Gallaher",
-      "authorImage": "/img/blog/meta/author-1.webp",
+      "authorImage": "/sliders/author/author-1.webp",
       "date": "Aug 15",
       "comment": 8
     },
@@ -14,17 +14,17 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["Shopping", "Fashion"],
       "author": "Cynthia Gomez",
-      "authorImage": "/img/blog/meta/author-2.webp",
+      "authorImage": "/sliders/author/author-2.webp",
       "date": "Jul 23",
       "comment": 19,
-      "image": "/img/blog/blogImg-1.webp"
+      "image": "/blog/blogImg-1.webp"
     },
     {
       "title": "Google Pay is Now Available in All Outlets",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua enim ad minim...",
       "tags": ["Bandicoot news"],
       "author": "Olivia Reyes",
-      "authorImage": "/img/blog/meta/author-2.webp",
+      "authorImage": "/sliders/author/author-2.webp",
       "date": "Jul 6",
       "comment": 7
     },
@@ -33,37 +33,37 @@
       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["Bandicoot news"],
       "author": "Rafael Marquez",
-      "authorImage": "/img/blog/meta/author-5.webp",
+      "authorImage": "/sliders/author/author-5.webp",
       "date": "Jun 12",
       "comment": 31,
-      "image": "/img/blog/blogImg-3.webp"
+      "image": "/blog/blogImg-3.webp"
     },
     {
       "title": "Shopping Tips. Places Where to Buy Cheap",
       "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["Shopping", "Personal finance"],
       "author": "Paul Woodred",
-      "authorImage": "/img/blog/meta/author-3.webp",
+      "authorImage": "/sliders/author/author-3.webp",
       "date": "May 29",
       "comment": 15,
-      "image": "/img/blog/blogImg-2.webp"
+      "image": "/blog/blogImg-2.webp"
     },
     {
       "title": "Payments Made Easy. How New Technology will Affect E-Commerce Industry Wo rldwide?",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim...",
       "tags": ["Shopping", "Technology"],
       "author": "Emma Gallaher",
-      "authorImage": "/img/blog/meta/author-1.webp",
+      "authorImage": "/sliders/author/author-1.webp",
       "date": "May 13",
       "comment": 28,
-      "image": "/img/blog/blogImg-4.webp"
+      "image": "/blog/blogImg-4.webp"
     },
     {
       "title": " Different Ways E-commerce Companies Can Capitalize on Apps",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["E-commerce"],
       "author": "Paul Woodred",
-      "authorImage": "/img/blog/meta/author-3.webp",
+      "authorImage": "/sliders/author/author-3.webp",
       "date": "Apr 15",
       "comment": 22
     },
@@ -72,7 +72,7 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["Travel", "Fashion"],
       "author": " Olivia Reyes",
-      "authorImage": "/img/blog/meta/author-4.webp",
+      "authorImage": "/sliders/author/author-4.webp",
       "date": "Apr 10",
       "comment": 7
     },
@@ -81,7 +81,7 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
       "tags": ["Travel", "Fashion"],
       "author": " Olivia Reyes",
-      "authorImage": "/img/blog/meta/author-4.webp",
+      "authorImage": "/sliders/author/author-4.webp",
       "date": "Apr 10",
       "comment": 7
     }

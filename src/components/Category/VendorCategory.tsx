@@ -4,11 +4,7 @@ import { RatingsList } from "@/components/Algolia/RatingsRefinementList";
 import CustomRefinementList from "@/components/Algolia/CustomRefinementList";
 import CustomMenu from "@/components/Algolia/CustomMenu";
 
-interface props {
-  vendor: string;
-}
-
-export default function VendorCategory({ vendor }: props) {
+export default function VendorCategory() {
   return (
     <aside className="w-1/3">
       <div
@@ -25,11 +21,8 @@ export default function VendorCategory({ vendor }: props) {
           ></button>
         </div>
         <div className="offcanvas-body py-grid-gutter px-lg-grid-gutter">
-          <CustomRefinementList
-            attribute="vendor"
-            title="Vendor"
-            defaultRefinement={[vendor]}
-          />
+          <CustomMenu attribute="product_type" title="Product Type" />
+          <CustomRefinementList attribute="vendor" title="Vendor" />
           <CustomRefinementList attribute="tags" title="Tags" />
 
           <CustomRangeSlider attribute="price" />

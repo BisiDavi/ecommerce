@@ -1,3 +1,4 @@
+import { useAppSelector } from "@/hooks/useRedux";
 import { RefinementList } from "react-instantsearch-dom";
 
 interface Props {
@@ -6,14 +7,12 @@ interface Props {
   defaultRefinement?: string[];
 }
 
-export default function CustomRefinementList({
-  title,
-  attribute,
-  defaultRefinement,
-}: Props) {
+export default function CustomRefinementList({ title, attribute }: Props) {
+  const { defaultRefinement } = useAppSelector((state) => state.algolia);
+  console.log("defaultRefinement", defaultRefinement);
   return (
     <>
-      <h5 className="mb-2">{title}</h5>
+      <h5 className="mb-2 text-xl font-medium">{title}</h5>
       {defaultRefinement ? (
         <RefinementList
           searchable={true}

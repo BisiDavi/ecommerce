@@ -36,43 +36,45 @@ export default function BlogGridSlider() {
                     {content.date}
                   </button>
                   <img
-                    className="sliderPostImg"
+                    className="sliderPostImg rounded-md"
                     src={content.image}
                     alt="Featured post"
                   />
                 </a>
               </Link>
-              <div className="text-content flex flex-col">
+              <div className="text-content flex flex-col px-5 w-full bottom-0 m-auto justify-center">
                 <div className="flex justify-between mb-2 pt-1">
-                  <h2 className="h5 blog-entry-title mb-0">
+                  <h2 className="text-xl">
                     <Link href={content.link} passHref>
                       <a>{content.title}</a>
                     </Link>
                   </h2>
                   <Link href="/blog-single-sidebar#comments" passHref>
-                    <a className="blog-entry-meta-link fs-sm text-nowrap ms-3 pt-1">
-                      <BiMessageRoundedDots />
+                    <a className="flex items-center">
+                      <BiMessageRoundedDots className="mx-2" />
                       {content.comment}
                     </a>
                   </Link>
                 </div>
-              </div>
-              <div className="flex items-center fs-sm">
-                <a className="blog-entry-meta-link" href="#">
-                  <div className="blog-entry-author-ava">
-                    <img src={content.authorImage} alt={content.author} />
+                <div className="flex items-center">
+                  <a className="flex items-center text-sm" href="#">
+                    <img
+                      src={content.authorImage}
+                      className="rounded-full mr-2"
+                      alt={content.author}
+                    />
+                    {content.author}
+                  </a>
+                  <span className="blog-entry-meta-divider mx-1"></span>
+                  <div className="flex items-center text-sm">
+                    <span className="mr-1">in</span>
+                    {content.category.map((category) => (
+                      <a href="#" key={category} className="text-sm mx-1">
+                        {category}
+                      </a>
+                    ))}
+                    {content.category?.length > 1 ? "," : ""}
                   </div>
-                  {content.author}
-                </a>
-                <span className="blog-entry-meta-divider"></span>
-                <div className="fs-sm text-muted">
-                  in{" "}
-                  {content.category.map((category) => (
-                    <a href="#" key={category} className="blog-entry-meta-link">
-                      {category}
-                    </a>
-                  ))}
-                  {content.category?.length > 1 ? "," : ""}
                 </div>
               </div>
             </article>
@@ -80,7 +82,7 @@ export default function BlogGridSlider() {
               {`
                 .sliderPostImg {
                   height: 100%;
-                  width: 100%;
+                  width: 98%;
                 }
               `}
             </style>
