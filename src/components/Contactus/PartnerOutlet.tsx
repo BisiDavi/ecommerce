@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import partnerContent from "@/json/contact-us.json";
 import Icons from "@/components/Icons";
 
 export default function PartnerOutlet() {
   return (
-    <section className="container mx-auto pt-4 mt-md-4 mb-5">
+    <section className="container mx-auto pt-4 md:mt-4 mb-10">
       <h2 className="text-lg lg:text-3xl font-medium text-center mb-3">
         Partner outlet stores
       </h2>
